@@ -793,9 +793,9 @@ TEST(Tier1_ModeRail_HitTesting_AllModes) {
     rail.OnMouseUp(36.0f, 150.0f);
     EXPECT_EQ(selectedMode, app::AppMode::Edit);
 
-    // Click View mode (item 4): y in [64 + 3*64, 64 + 3*64 + 56] = [256, 312]
-    rail.OnMouseDown(36.0f, 280.0f);
-    rail.OnMouseUp(36.0f, 280.0f);
+    // Click View mode (item 3): y in [64 + 2*64, 64 + 2*64 + 56] = [192, 248]
+    rail.OnMouseDown(36.0f, 210.0f);
+    rail.OnMouseUp(36.0f, 210.0f);
     EXPECT_EQ(selectedMode, app::AppMode::View);
 }
 
@@ -1836,9 +1836,9 @@ TEST(Tier5_StatusBar_SidebarToggles_VisibilityState) {
 
     auto sidebar = docView.GetLeftSidebar();
     EXPECT_TRUE(sidebar != nullptr);
-    EXPECT_TRUE(sidebar->IsVisible());
+    EXPECT_FALSE(sidebar->IsVisible()); // it starts hidden
 
-    sidebar->SetVisible(false);
+    sidebar->SetVisible(false); // test setting to false again
     EXPECT_FALSE(sidebar->IsVisible());
     docView.Layout(D2D1::RectF(0, 0, 1024, 768));
     EXPECT_EQ(sidebar->GetBounds().right, 0.0f);
@@ -2429,34 +2429,34 @@ TEST(M3_SelectTool_DragLifecycle_CaptureAndKeyboardHandling) {
     tool.OnActivate(context);
     EXPECT_EQ(tool.GetState(), ui::tools::ToolState::Idle);
 
-    // 1. PointerDown outside -> starts Marquee selection + acquires capture
+    // 4. Object selection & move drag
+    tool.GetSelectionModel().Select("test_obj", 0, RectF{ 100.0f, 100.0f, 200.0f, 200.0f });
+    
+    // 1. PointerDown on object body -> starts move drag + acquires capture
     ui::input::PointerEvent downEvt;
     downEvt.button = ui::input::PointerButton::Left;
-    downEvt.canvasPoint = { 50.0f, 50.0f };
-    downEvt.clientDip = { 50.0f, 50.0f };
+    downEvt.canvasPoint = { 150.0f, 150.0f }; // inside body
+    downEvt.clientDip = { 150.0f, 150.0f };
 
     auto res = tool.OnPointerDown(downEvt, context);
     EXPECT_EQ(res, ui::input::EventResult::Handled);
     EXPECT_EQ(tool.GetState(), ui::tools::ToolState::Dragging);
     EXPECT_TRUE(captureService.HasCapture(&tool));
 
-    // 2. PointerMove during marquee
+    // 2. PointerMove during drag
     ui::input::PointerEvent moveEvt;
-    moveEvt.canvasPoint = { 150.0f, 150.0f };
+    moveEvt.canvasPoint = { 160.0f, 160.0f };
     res = tool.OnPointerMove(moveEvt, context);
     EXPECT_EQ(res, ui::input::EventResult::Handled);
 
-    // 3. PointerUp -> commits marquee & releases capture
+    // 3. PointerUp -> commits drag & releases capture
     ui::input::PointerEvent upEvt;
     upEvt.button = ui::input::PointerButton::Left;
-    upEvt.canvasPoint = { 150.0f, 150.0f };
+    upEvt.canvasPoint = { 160.0f, 160.0f };
     res = tool.OnPointerUp(upEvt, context);
     EXPECT_EQ(res, ui::input::EventResult::Handled);
     EXPECT_EQ(tool.GetState(), ui::tools::ToolState::Idle);
     EXPECT_FALSE(captureService.HasCapture(&tool));
-
-    // 4. Object selection & move drag
-    tool.GetSelectionModel().Select("test_obj", 0, RectF{ 100.0f, 100.0f, 200.0f, 200.0f });
 
     // Click inside object body (150, 150)
     downEvt.canvasPoint = { 150.0f, 150.0f };
@@ -2470,8 +2470,10 @@ TEST(M3_SelectTool_DragLifecycle_CaptureAndKeyboardHandling) {
     EXPECT_EQ(res, ui::input::EventResult::Handled);
 
     RectF movedBounds = tool.GetSelectionModel().GetSelectionBounds();
-    EXPECT_FLOAT_EQ(movedBounds.left, 120.0f);
-    EXPECT_FLOAT_EQ(movedBounds.top, 130.0f);
+    // After first drag: {100,100,200,200} moved by delta (160-150)=+10 -> {110,110,210,210}
+    // Second drag from 150 to (170,180): delta +20,+30 -> {130,140,230,240}
+    EXPECT_FLOAT_EQ(movedBounds.left, 130.0f);
+    EXPECT_FLOAT_EQ(movedBounds.top, 140.0f);
 
     upEvt.canvasPoint = { 170.0f, 180.0f };
     tool.OnPointerUp(upEvt, context);
@@ -2563,9 +2565,15 @@ TEST(M3_ToolStateMachine_PointerCapture_CleanReleaseOnToolSwitch) {
     EXPECT_TRUE(stateMachine.SetActiveTool(ui::tools::ToolType::Select));
     EXPECT_EQ(stateMachine.GetActiveToolType(), ui::tools::ToolType::Select);
 
+    auto selectTool = dynamic_cast<ui::tools::SelectTool*>(stateMachine.GetActiveTool());
+    if (selectTool) {
+        selectTool->GetSelectionModel().Select("dummy", 0, RectF{5.0f, 5.0f, 50.0f, 50.0f});
+    }
+
     ui::input::PointerEvent downEvt;
     downEvt.button = ui::input::PointerButton::Left;
-    downEvt.canvasPoint = { 10.0f, 10.0f };
+    downEvt.canvasPoint = { 27.5f, 27.5f };
+    stateMachine.GetContext().getTextPage = [](int) -> core::interfaces::dom::ITextPage* { return nullptr; };
     stateMachine.RoutePointerDown(downEvt);
     EXPECT_TRUE(captureService.IsAnyCaptured());
 

@@ -28,8 +28,12 @@ jobs:
     - name: Build
       run: cmake --build native/build --config Release
 
+    - name: Create Test Output Directories
+      run: New-Item -ItemType Directory -Force -Path native/tests/fixtures/output
+
     - name: Run Regression Suite
-      run: native\build\tests\Release\RegressionSuite.exe
+      run: build\tests\Release\RegressionSuite.exe
+      working-directory: native
       
     - name: Upload Test Artifacts
       if: failure()

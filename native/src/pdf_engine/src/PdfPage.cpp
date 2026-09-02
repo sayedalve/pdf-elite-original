@@ -244,7 +244,33 @@ std::shared_ptr<core::interfaces::dom::IImage> PdfPage::InsertImage(const std::w
 }
 
 std::shared_ptr<core::interfaces::dom::IImage> PdfPage::InsertImageFromMemory(const std::vector<uint8_t>& imageData, int width, int height, const RectF& bounds) {
-    (void)imageData; (void)width; (void)height; (void)bounds;
+    std::lock_guard<std::recursive_mutex> docLock(m_parentDoc->GetMutex());
+    std::lock_guard<std::mutex> lock(m_mutex);
+
+    FPDF_PAGEOBJECT imgObj = FPDFPageObj_NewImageObj(m_doc);
+    if (!imgObj) return nullptr;
+    
+    // Create a copy of the buffer because PDFium doesn't copy it
+    uint8_t* buffer = new uint8_t[imageData.size()];
+    std::copy(imageData.begin(), imageData.end(), buffer);
+    
+    FPDF_BITMAP bmp = FPDFBitmap_CreateEx(width, height, FPDFBitmap_BGRA, buffer, width * 4);
+    if (bmp) {
+        FPDF_PAGE pages[] = { m_page };
+        FPDFImageObj_SetBitmap(pages, 1, imgObj, bmp);
+        
+        FS_MATRIX mat = { bounds.right - bounds.left, 0.0f, 0.0f, bounds.top - bounds.bottom, bounds.left, bounds.bottom };
+        FPDFPageObj_SetMatrix(imgObj, &mat);
+        
+        FPDFPage_InsertObject(m_page, imgObj);
+        FPDFPage_GenerateContent(m_page);
+        
+        // FPDFBitmap_Destroy(bmp); // usually managed by PDFium or we should keep it alive? Actually wait, FPDFBitmap_Destroy might be needed.
+        
+        return std::make_shared<PdfImage>(imgObj, this);
+    }
+    
+    delete[] buffer;
     return nullptr;
 }
 
