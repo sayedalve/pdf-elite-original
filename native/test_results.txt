@@ -1,0 +1,731 @@
+==============================================
+ PDF Elite E2E & UI Interaction Test Suite
+==============================================
+
+======================================
+ PDF Elite Native Regression Suite
+======================================
+
+Running: Tier1_HomeView_BrandingAndInitialLayout... Func returned!
+PASS (17.1738 ms)
+Running: Tier1_HomeView_OpenPdfButton_InvokesCallback... Func returned!
+PASS (69.1778 ms)
+Running: Tier1_HomeView_CreatePdfButton_InvokesCallback... Func returned!
+PASS (23.2928 ms)
+Running: Tier1_HomeView_QuickTools_EditPdfCard... Func returned!
+PASS (23.8942 ms)
+Running: Tier1_HomeView_QuickTools_AllEightTools... Func returned!
+PASS (22.8513 ms)
+Running: Tier1_HomeView_RecentFiles_RowClickOpensFile... Func returned!
+PASS (26.429 ms)
+Running: Tier1_HomeView_HoverStateTracking... Func returned!
+PASS (6.7223 ms)
+Running: Tier1_Toolbar_LayoutAndButtonCount... Func returned!
+PASS (6.0379 ms)
+Running: Tier1_Toolbar_ModeSwitching_ViewMode... Func returned!
+PASS (6.9379 ms)
+Running: Tier1_Toolbar_ModeSwitching_EditMode... Func returned!
+PASS (6.7137 ms)
+Running: Tier1_Toolbar_ModeSwitching_CommentMode... Func returned!
+PASS (6.2153 ms)
+Running: Tier1_Toolbar_ModeSwitching_OrganizeMode... Func returned!
+PASS (8.1131 ms)
+Running: Tier1_Toolbar_ModeSwitching_ToolsMode... Func returned!
+PASS (6.3074 ms)
+Running: Tier1_Toolbar_ActionDispatch_AllStandardActions... Func returned!
+PASS (6.2445 ms)
+Running: Tier1_Toolbar_SetActiveTool_StateTracking... Func returned!
+PASS (7.0332 ms)
+Running: Tier1_ModeRail_ItemDefinitionsAndProperties... Func returned!
+PASS (5.2989 ms)
+Running: Tier1_ModeRail_HitTesting_HomeMode... Func returned!
+PASS (7.7693 ms)
+Running: Tier1_ModeRail_HitTesting_AllModes... Func returned!
+PASS (7.0171 ms)
+Running: Tier1_ModeRail_ActiveMode_GetterSetter... Func returned!
+PASS (7.5533 ms)
+Running: Tier1_ModeRail_MouseMoveAndLeave_HoverStates... Func returned!
+PASS (8.2355 ms)
+Running: Tier1_Dialog_CreateBlank_PresetsAndDimensions... Func returned!
+PASS (6.6851 ms)
+Running: Tier1_Dialog_CreateBlank_UnitConversions... Func returned!
+PASS (0.4229 ms)
+Running: Tier1_Dialog_CreateBlank_Operation_Success... Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (44.5597 ms)
+Running: Tier1_Dialog_CombinePdf_ParamsAndReorder... Func returned!
+PASS (12.8517 ms)
+Running: Tier1_Dialog_CombinePdf_Operation_Success... Created PdfDocument 00000171C6491C90
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C6491840
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C6491110
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (32.2263 ms)
+Running: Tier1_Dialog_ExtractImages_Params... Func returned!
+PASS (5.8275 ms)
+Running: Tier1_Dialog_Watermark_Command_ExecuteUndoRedo... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C45F0 with parent 00000171C6491840
+GetPage created 00000171C63C4330 with parent 00000171C6491840
+~PdfPage start 00000171C63C4330 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4120 with parent 00000171C6491840
+~PdfPage start 00000171C63C4120 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3FC0 with parent 00000171C6491840
+~PdfPage start 00000171C63C3FC0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C45F0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (27.789 ms)
+Running: Tier1_Dialog_HeaderFooter_Command_ExecuteUndoRedo... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C4960 with parent 00000171C6491840
+GetPage created 00000171C63C3F10 with parent 00000171C6491840
+~PdfPage start 00000171C63C3F10 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4A10 with parent 00000171C6491840
+~PdfPage start 00000171C63C4A10 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4330 with parent 00000171C6491840
+~PdfPage start 00000171C63C4330 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3FC0 with parent 00000171C6491840
+~PdfPage start 00000171C63C3FC0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4120 with parent 00000171C6491840
+~PdfPage start 00000171C63C4120 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4330 with parent 00000171C6491840
+~PdfPage start 00000171C63C4330 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4120 with parent 00000171C6491840
+~PdfPage start 00000171C63C4120 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3FC0 with parent 00000171C6491840
+~PdfPage start 00000171C63C3FC0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C4960 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (18.4982 ms)
+Running: Tier1_Dialog_Background_Command_ExecuteUndoRedo... Created PdfDocument 00000171C6491C90
+GetPage created 00000171C63C45F0 with parent 00000171C6491C90
+GetPage created 00000171C63C3BA0 with parent 00000171C6491C90
+~PdfPage start 00000171C63C3BA0 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4750 with parent 00000171C6491C90
+~PdfPage start 00000171C63C4750 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4120 with parent 00000171C6491C90
+~PdfPage start 00000171C63C4120 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C45F0 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (12.1037 ms)
+Running: Tier1_Dialog_Link_Command_ExecuteUndoRedo... Created PdfDocument 00000171C6490FA0
+GetPage created 00000171C63C3DB0 with parent 00000171C6490FA0
+GetPage created 00000171C63C3BA0 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C3BA0 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3C50 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C3C50 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4A10 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C4A10 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C3DB0 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (11.8739 ms)
+Running: Tier1_File_OpenValidDocument... Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (6.8403 ms)
+Running: Tier1_File_SaveAs_WritesNewFile... Created PdfDocument 00000171C6491110
+Created PdfDocument 00000171C6490FA0
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (33.0659 ms)
+Running: Tier1_File_CreateBlank_AndVerify... Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (27.6359 ms)
+Running: Tier1_File_CommandStack_DirtyTracking... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C3C50 with parent 00000171C6491840
+~PdfPage start 00000171C63C3C50 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (7.2826 ms)
+Running: Tier1_File_RecentFiles_Persistence... Func returned!
+PASS (11.9578 ms)
+Running: Tier1_File_UndoRedo_RestoresState... Created PdfDocument 00000171C64919B0
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (8.5701 ms)
+Running: Tier1_Tabs_TabBar_SetTabs_UpdatesState... Func returned!
+PASS (8.382 ms)
+Running: Tier1_Tabs_TabBar_ClickSelectsTab... Func returned!
+PASS (8.4318 ms)
+Running: Tier1_Tabs_TabBar_ClickCloseButton... Func returned!
+PASS (7.8562 ms)
+Running: Tier1_Tabs_AppShell_HomeAndDocumentMode... Func returned!
+PASS (6.0642 ms)
+Running: Tier1_Tabs_AppShell_WindowControls... Func returned!
+PASS (8.0996 ms)
+Running: Tier1_Tabs_StatusBar_DisplayFormatting... Func returned!
+PASS (7.6858 ms)
+Running: Tier2_Boundary_EmptyFile_HandledGracefully... [LoadFromFile] Invalid format
+[LoadFromFile] Invalid format FPDF_LoadCustomDocument
+Func returned!
+PASS (8.9372 ms)
+Running: Tier2_Boundary_NonExistentFile_HandledGracefully... [LoadFromFile] Failed to open (err 2): tests/fixtures/malformed/non_existent_file_xyz123.pdf
+Func returned!
+PASS (6.5232 ms)
+Running: Tier2_Boundary_CorruptedHeader_HandledGracefully... Created PdfDocument 00000171C64909E0
+[LoadFromFile] Invalid format
+[LoadFromFile] Invalid format FPDF_LoadCustomDocument
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (9.725 ms)
+Running: Tier2_Boundary_Zoom_MaxClamp... Created PdfDocument 00000171C6490FA0
+GetPage created 00000171C63C4960 with parent 00000171C6490FA0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C4960 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (11.1088 ms)
+Running: Tier2_Boundary_Zoom_MinClamp... Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C45F0 with parent 00000171C64909E0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C45F0 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (10.2522 ms)
+Running: Tier2_Boundary_PageNav_NextBeyondEnd... Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C3F10 with parent 00000171C64909E0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C3F10 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (10.2411 ms)
+Running: Tier2_Boundary_PageNav_PrevBeforeBeginning... Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C45F0 with parent 00000171C64909E0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C45F0 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (10.419 ms)
+Running: Tier2_Boundary_PageOps_DeleteAllPagesPrevented... Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (7.3316 ms)
+Running: Tier2_Boundary_PageOps_InvalidPageIndex... Created PdfDocument 00000171C6491F70
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (8.355 ms)
+Running: Tier2_Boundary_RapidRepeatedClicks_ToolbarAndZoom... Func returned!
+PASS (7.8385 ms)
+Running: Tier2_Boundary_EmptySearchQuery_HandledGracefully... Created PdfDocument 00000171C6491E00
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (8.6216 ms)
+Running: Tier2_Boundary_CreateBlank_ZeroOrNegativePages... Created PdfDocument 00000171C6491840
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (23.1191 ms)
+Running: Tier2_Boundary_Combine_EmptyFileList... Func returned!
+PASS (5.208 ms)
+Running: Tier3_Combination_Open_Zoom_Annotate_Undo_Redo_Save... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C3D00 with parent 00000171C6491840
+GetPage created 00000171C63C4960 with parent 00000171C6491840
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+GetPage created 00000171C63C4800 with parent 00000171C6491840
+~PdfPage start 00000171C63C4800 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3BA0 with parent 00000171C6491840
+~PdfPage start 00000171C63C3BA0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3C50 with parent 00000171C6491840
+~PdfPage start 00000171C63C3C50 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+Created PdfDocument 00000171C6490FA0
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 00000171C63C4960 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C3D00 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (42.4009 ms)
+Running: Tier3_Combination_CreateBlank_InsertPage_Rotate_Delete_Save... Created PdfDocument 00000171C6491E00
+GetPage created 00000171C63C4120 with parent 00000171C6491E00
+~PdfPage start 00000171C63C4120 with parent 00000171C6491E00
+ReleasePage start 00000171C6491E00
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C4330 with parent 00000171C6491E00
+~PdfPage start 00000171C63C4330 with parent 00000171C6491E00
+ReleasePage start 00000171C6491E00
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+Created PdfDocument 00000171C6491110
+GetPage created 00000171C63C3BA0 with parent 00000171C6491110
+~PdfPage start 00000171C63C3BA0 with parent 00000171C6491110
+ReleasePage start 00000171C6491110
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (71.145 ms)
+Running: Tier3_Combination_MultiDoc_Watermark_Background_Switch... Created PdfDocument 00000171C6491840
+Created PdfDocument 00000171C6491C90
+GetPage created 00000171C63C4800 with parent 00000171C6491840
+GetPage created 00000171C63C3BA0 with parent 00000171C6491C90
+GetPage created 00000171C63C4330 with parent 00000171C6491840
+~PdfPage start 00000171C63C4330 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C45F0 with parent 00000171C6491C90
+~PdfPage start 00000171C63C45F0 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C3BA0 with parent 00000171C6491C90
+ReleasePage start 00000171C6491C90
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfPage start 00000171C63C4800 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (62.7592 ms)
+Running: Tier3_Combination_Link_HeaderFooter_Watermark_Composite... Created PdfDocument 00000171C64919B0
+GetPage created 00000171C63C4750 with parent 00000171C64919B0
+GetPage created 00000171C63C3F10 with parent 00000171C64919B0
+~PdfPage start 00000171C63C3F10 with parent 00000171C64919B0
+ReleasePage start 00000171C64919B0
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C45F0 with parent 00000171C64919B0
+~PdfPage start 00000171C63C45F0 with parent 00000171C64919B0
+ReleasePage start 00000171C64919B0
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C4960 with parent 00000171C64919B0
+~PdfPage start 00000171C63C4960 with parent 00000171C64919B0
+ReleasePage start 00000171C64919B0
+ReleasePage lock acquired
+~PdfPage end
+Created PdfDocument 00000171C6491C90
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 00000171C63C4750 with parent 00000171C64919B0
+ReleasePage start 00000171C64919B0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (54.1344 ms)
+Running: Tier3_Combination_QuickTools_Combine_To_Editor... Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C6491840
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C45F0 with parent 00000171C64909E0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+GetPage created 00000171C63C46A0 with parent 00000171C64909E0
+~PdfPage start 00000171C63C46A0 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 00000171C63C45F0 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (42.698 ms)
+Running: Tier3_Combination_ThemeChange_While_DocumentOpen... Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C3F10 with parent 00000171C64909E0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C3F10 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (12.0376 ms)
+Running: Tier4_Scenario_FullDocumentAuthoring... Created PdfDocument 00000171C6491F70
+GetPage created 00000171C63C46A0 with parent 00000171C6491F70
+GetPage created 00000171C63C4750 with parent 00000171C6491F70
+~PdfPage start 00000171C63C4750 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3C50 with parent 00000171C6491F70
+~PdfPage start 00000171C63C3C50 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C41D0 with parent 00000171C6491F70
+~PdfPage start 00000171C63C41D0 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C4120 with parent 00000171C6491F70
+~PdfPage start 00000171C63C4120 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C3C50 with parent 00000171C6491F70
+~PdfPage start 00000171C63C3C50 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C45F0 with parent 00000171C6491F70
+~PdfPage start 00000171C63C45F0 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C3F10 with parent 00000171C6491F70
+~PdfPage start 00000171C63C3F10 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+~PdfPage end
+Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 00000171C63C46A0 with parent 00000171C6491F70
+ReleasePage start 00000171C6491F70
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (98.7482 ms)
+Running: Tier4_Scenario_MultiDocumentMergeAndRestructure... Created PdfDocument 00000171C6491F70
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C6491840
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 00000171C6490FA0
+GetPage created 00000171C63C4750 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C4750 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C4800 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C4800 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+Created PdfDocument 00000171C64909E0
+GetPage created 00000171C63C45F0 with parent 00000171C64909E0
+~PdfPage start 00000171C63C45F0 with parent 00000171C64909E0
+ReleasePage start 00000171C64909E0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (94.7038 ms)
+Running: Tier4_Scenario_AssetExtractionAndReporting... Created PdfDocument 00000171C6490FA0
+GetPage created 00000171C63C41D0 with parent 00000171C6490FA0
+~PdfPage start 00000171C63C41D0 with parent 00000171C6490FA0
+ReleasePage start 00000171C6490FA0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (9.4902 ms)
+Running: Tier4_Scenario_ReviewAndCommentingWorkflow... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C41D0 with parent 00000171C6491840
+~PdfPage start 00000171C63C41D0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C46A0 with parent 00000171C6491840
+~PdfPage start 00000171C63C46A0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C4330 with parent 00000171C6491840
+~PdfPage start 00000171C63C4330 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 00000171C63C3D00 with parent 00000171C6491840
+~PdfPage start 00000171C63C3D00 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+Created PdfDocument 00000171C64909E0
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (36.9878 ms)
+Running: Tier4_Scenario_FullDocumentLifecycle_StartToFinish... Created PdfDocument 00000171C6491840
+GetPage created 00000171C63C45F0 with parent 00000171C6491840
+GetPage created 00000171C63C3FC0 with parent 00000171C6491840
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+GetTextObjects start
+Counting objects...
+Count: 0
+Returning textObjs
+Counting objects...
+Count: 0
+~PdfPage start 00000171C63C3FC0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C46A0 with parent 00000171C6491840
+~PdfPage start 00000171C63C46A0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 00000171C63C46A0 with parent 00000171C6491840
+~PdfPage start 00000171C63C46A0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+Created PdfDocument 00000171C6490FA0
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 00000171C63C45F0 with parent 00000171C6491840
+ReleasePage start 00000171C6491840
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (54.6771 ms)
+
+======================================
+Results: 66 passed, 0 failed, 0 skipped, 0 not implemented.

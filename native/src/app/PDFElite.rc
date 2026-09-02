@@ -1,0 +1,274 @@
+#include <windows.h>
+#include <commctrl.h>
+#include "ui/resource.h"
+
+// Version Information
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 3,0,0,0
+PRODUCTVERSION 3,0,0,0
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "PDF Elite Contributors"
+            VALUE "FileDescription", "PDF Elite Native Viewer and Editor"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "PDFElite"
+            VALUE "LegalCopyright", "Copyright (C) 2026 PDF Elite Contributors"
+            VALUE "OriginalFilename", "PDFElite.exe"
+            VALUE "ProductName", "PDF Elite"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+// ============================================================================
+// Task 14: Link Annotation Dialog
+// ============================================================================
+IDD_LINK_DIALOG DIALOGEX 0, 0, 270, 160
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Link Annotation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Destination",IDC_STATIC,7,7,256,76
+    AUTORADIOBUTTON "Open Web URL",IDC_LINK_TYPE_URL,15,20,100,10,WS_GROUP
+    EDITTEXT        IDC_LINK_URL_EDIT,27,33,228,14,ES_AUTOHSCROLL
+    AUTORADIOBUTTON "Go to Page in Document",IDC_LINK_TYPE_PAGE,15,52,110,10
+    LTEXT           "Page number:",IDC_STATIC,27,65,50,8
+    EDITTEXT        IDC_LINK_PAGE_EDIT,82,63,40,14,ES_NUMBER | ES_AUTOHSCROLL
+    CONTROL         "",IDC_LINK_PAGE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,122,63,11,14
+
+    GROUPBOX        "Appearance",IDC_STATIC,7,88,256,42
+    AUTOCHECKBOX    "Draw visible border rectangle",IDC_LINK_BORDER_CHECK,15,102,120,10
+    PUSHBUTTON      "Border Color...",IDC_LINK_COLOR_BTN,150,100,70,14
+
+    DEFPUSHBUTTON   "OK",IDOK,157,138,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,213,138,50,15
+END
+
+// ============================================================================
+// Task 15: Document Background Dialog
+// ============================================================================
+IDD_BACKGROUND_DIALOG DIALOGEX 0, 0, 300, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Background"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Background Source",IDC_STATIC,7,7,286,80
+    AUTORADIOBUTTON "Solid Color",IDC_BG_TYPE_COLOR,15,20,60,10,WS_GROUP
+    PUSHBUTTON      "Choose Color...",IDC_BG_COLOR_BTN,85,18,70,14
+    CONTROL         "",IDC_BG_COLOR_PREVIEW,"Static",SS_BLACKFRAME | SS_SUNKEN,165,18,30,14
+    AUTORADIOBUTTON "Image File",IDC_BG_TYPE_IMAGE,15,42,60,10
+    EDITTEXT        IDC_BG_IMAGE_PATH_EDIT,27,55,205,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BG_IMAGE_BROWSE_BTN,237,55,50,14
+
+    GROUPBOX        "Appearance",IDC_STATIC,7,92,286,45
+    LTEXT           "Opacity:",IDC_STATIC,15,110,32,8
+    CONTROL         "",IDC_BG_OPACITY_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,50,105,185,20
+    EDITTEXT        IDC_BG_OPACITY_EDIT,240,107,35,14,ES_CENTER | ES_READONLY
+
+    GROUPBOX        "Page Range",IDC_STATIC,7,142,286,40
+    AUTORADIOBUTTON "All Pages",IDC_BG_PAGE_ALL,15,158,50,10,WS_GROUP
+    AUTORADIOBUTTON "Current Page",IDC_BG_PAGE_CURRENT,75,158,60,10
+    AUTORADIOBUTTON "Pages:",IDC_BG_PAGE_RANGE,145,158,40,10
+    EDITTEXT        IDC_BG_RANGE_EDIT,190,156,85,14,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "Apply",IDOK,187,188,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,243,188,50,15
+END
+
+// ============================================================================
+// Task 16: Watermark Dialog
+// ============================================================================
+IDD_WATERMARK_DIALOG DIALOGEX 0, 0, 310, 245
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Watermark"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Text & Font",IDC_STATIC,7,7,296,68
+    LTEXT           "Text:",IDC_STATIC,15,20,24,8
+    EDITTEXT        IDC_WM_TEXT_EDIT,45,18,248,14,ES_AUTOHSCROLL
+    LTEXT           "Font:",IDC_STATIC,15,38,24,8
+    COMBOBOX        IDC_WM_FONT_COMBO,45,36,95,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Size:",IDC_STATIC,150,38,20,8
+    EDITTEXT        IDC_WM_SIZE_EDIT,175,36,30,14,ES_NUMBER | ES_AUTOHSCROLL
+    CONTROL         "",IDC_WM_SIZE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,205,36,11,14
+    AUTOCHECKBOX    "Bold",IDC_WM_BOLD_CHECK,225,38,30,10
+    AUTOCHECKBOX    "Italic",IDC_WM_ITALIC_CHECK,260,38,30,10
+    PUSHBUTTON      "Color...",IDC_WM_COLOR_BTN,45,54,55,14
+
+    GROUPBOX        "Appearance & Placement",IDC_STATIC,7,78,296,82
+    LTEXT           "Opacity:",IDC_STATIC,15,92,30,8
+    CONTROL         "",IDC_WM_OPACITY_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,50,88,195,20
+    EDITTEXT        IDC_WM_OPACITY_EDIT,250,90,35,14,ES_CENTER | ES_READONLY
+    LTEXT           "Rotation:",IDC_STATIC,15,115,32,8
+    COMBOBOX        IDC_WM_ROT_COMBO,50,113,75,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_WM_ROT_EDIT,130,113,30,14,ES_NUMBER | ES_AUTOHSCROLL
+    LTEXT           "Position:",IDC_STATIC,175,115,30,8
+    COMBOBOX        IDC_WM_POS_COMBO,210,113,83,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    AUTORADIOBUTTON "Over Page Content",IDC_WM_LAYER_OVER,50,138,85,10,WS_GROUP
+    AUTORADIOBUTTON "Under Content (Background)",IDC_WM_LAYER_UNDER,145,138,120,10
+
+    GROUPBOX        "Page Range",IDC_STATIC,7,164,296,48
+    AUTORADIOBUTTON "All Pages",IDC_WM_PAGE_ALL,15,180,50,10,WS_GROUP
+    AUTORADIOBUTTON "Current Page",IDC_WM_PAGE_CURRENT,75,180,60,10
+    AUTORADIOBUTTON "Pages:",IDC_WM_PAGE_RANGE,145,180,40,10
+    EDITTEXT        IDC_WM_RANGE_EDIT,190,178,95,14,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "Apply",IDOK,197,222,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,253,222,50,15
+END
+
+// ============================================================================
+// Task 17: Header & Footer Dialog
+// ============================================================================
+IDD_HEADER_FOOTER_DIALOG DIALOGEX 0, 0, 340, 290
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Header & Footer"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Header (Top of Page)",IDC_STATIC,7,7,326,52
+    LTEXT           "Left:",IDC_STATIC,15,20,20,8
+    EDITTEXT        IDC_HF_TOP_LEFT_EDIT,38,18,65,14,ES_AUTOHSCROLL
+    LTEXT           "Center:",IDC_STATIC,110,20,26,8
+    EDITTEXT        IDC_HF_TOP_CENTER_EDIT,140,18,75,14,ES_AUTOHSCROLL
+    LTEXT           "Right:",IDC_STATIC,222,20,22,8
+    EDITTEXT        IDC_HF_TOP_RIGHT_EDIT,248,18,75,14,ES_AUTOHSCROLL
+
+    GROUPBOX        "Footer (Bottom of Page)",IDC_STATIC,7,62,326,52
+    LTEXT           "Left:",IDC_STATIC,15,75,20,8
+    EDITTEXT        IDC_HF_BOTTOM_LEFT_EDIT,38,73,65,14,ES_AUTOHSCROLL
+    LTEXT           "Center:",IDC_STATIC,110,75,26,8
+    EDITTEXT        IDC_HF_BOTTOM_CENTER_EDIT,140,73,75,14,ES_AUTOHSCROLL
+    LTEXT           "Right:",IDC_STATIC,222,75,22,8
+    EDITTEXT        IDC_HF_BOTTOM_RIGHT_EDIT,248,73,75,14,ES_AUTOHSCROLL
+
+    GROUPBOX        "Insert Macro Tokens",IDC_STATIC,7,118,326,35
+    PUSHBUTTON      "Insert Page Number",IDC_HF_MACRO_PAGE_NUM,15,130,85,15
+    PUSHBUTTON      "Insert Page Count",IDC_HF_MACRO_PAGE_COUNT,110,130,85,15
+    PUSHBUTTON      "Insert Date",IDC_HF_MACRO_DATE,205,130,70,15
+
+    GROUPBOX        "Font & Margins (Points)",IDC_STATIC,7,157,326,52
+    LTEXT           "Font:",IDC_STATIC,15,170,20,8
+    COMBOBOX        IDC_HF_FONT_COMBO,40,168,75,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Size:",IDC_STATIC,125,170,20,8
+    EDITTEXT        IDC_HF_SIZE_EDIT,150,168,25,14,ES_NUMBER | ES_AUTOHSCROLL
+    PUSHBUTTON      "Color...",IDC_HF_COLOR_BTN,185,168,45,14
+    LTEXT           "Top:",IDC_STATIC,15,190,18,8
+    EDITTEXT        IDC_HF_MARGIN_TOP_EDIT,38,188,25,14,ES_NUMBER
+    LTEXT           "Bot:",IDC_STATIC,72,190,16,8
+    EDITTEXT        IDC_HF_MARGIN_BOTTOM_EDIT,92,188,25,14,ES_NUMBER
+    LTEXT           "Left:",IDC_STATIC,125,190,18,8
+    EDITTEXT        IDC_HF_MARGIN_LEFT_EDIT,148,188,25,14,ES_NUMBER
+    LTEXT           "Right:",IDC_STATIC,180,190,22,8
+    EDITTEXT        IDC_HF_MARGIN_RIGHT_EDIT,205,188,25,14,ES_NUMBER
+
+    GROUPBOX        "Page Range",IDC_STATIC,7,213,326,42
+    AUTORADIOBUTTON "All Pages",IDC_HF_PAGE_ALL,15,229,50,10,WS_GROUP
+    AUTORADIOBUTTON "Pages:",IDC_HF_PAGE_RANGE,75,229,40,10
+    EDITTEXT        IDC_HF_RANGE_EDIT,120,227,95,14,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "Apply",IDOK,227,265,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,283,265,50,15
+END
+
+// ============================================================================
+// Task 18: Create Blank PDF Dialog
+// ============================================================================
+IDD_CREATE_BLANK_DIALOG DIALOGEX 0, 0, 280, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Blank PDF"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Page Specifications",IDC_STATIC,7,7,266,65
+    LTEXT           "Page Size:",IDC_STATIC,15,20,38,8
+    COMBOBOX        IDC_BLANK_SIZE_COMBO,60,18,85,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Width:",IDC_STATIC,15,38,25,8
+    EDITTEXT        IDC_BLANK_WIDTH_EDIT,60,36,45,14,ES_AUTOHSCROLL
+    LTEXT           "Height:",IDC_STATIC,115,38,28,8
+    EDITTEXT        IDC_BLANK_HEIGHT_EDIT,148,36,45,14,ES_AUTOHSCROLL
+    LTEXT           "Units:",IDC_STATIC,200,38,22,8
+    COMBOBOX        IDC_BLANK_UNIT_COMBO,225,36,40,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    AUTORADIOBUTTON "Portrait",IDC_BLANK_PORTRAIT_RADIO,60,54,50,10,WS_GROUP
+    AUTORADIOBUTTON "Landscape",IDC_BLANK_LANDSCAPE_RADIO,120,54,55,10
+
+    GROUPBOX        "Document Configuration",IDC_STATIC,7,76,266,80
+    LTEXT           "Page Count:",IDC_STATIC,15,92,45,8
+    EDITTEXT        IDC_BLANK_PAGE_COUNT_EDIT,65,90,40,14,ES_NUMBER | ES_AUTOHSCROLL
+    CONTROL         "",IDC_BLANK_COUNT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,105,90,11,14
+    LTEXT           "Initial Output File (Optional):",IDC_STATIC,15,112,120,8
+    EDITTEXT        IDC_BLANK_OUTPUT_EDIT,15,124,190,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BLANK_OUTPUT_BROWSE,210,124,55,14
+
+    DEFPUSHBUTTON   "Create",IDOK,167,175,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,223,175,50,15
+END
+
+// ============================================================================
+// Task 19: Extract Images Dialog
+// ============================================================================
+IDD_EXTRACT_IMAGES_DIALOG DIALOGEX 0, 0, 290, 195
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Extract Images from PDF"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Source PDF",IDC_STATIC,7,7,276,45
+    LTEXT           "Document:",IDC_STATIC,15,22,40,8
+    EDITTEXT        IDC_EXTRACT_SRC_EDIT,58,20,160,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_EXTRACT_SRC_BROWSE,223,20,50,14
+
+    GROUPBOX        "Extraction Settings",IDC_STATIC,7,56,276,82
+    LTEXT           "Destination:",IDC_STATIC,15,70,42,8
+    EDITTEXT        IDC_EXTRACT_DEST_EDIT,60,68,155,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_EXTRACT_DEST_BROWSE,220,68,53,14
+    LTEXT           "Format:",IDC_STATIC,15,92,30,8
+    COMBOBOX        IDC_EXTRACT_FORMAT_COMBO,60,90,60,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Prefix:",IDC_STATIC,135,92,25,8
+    EDITTEXT        IDC_EXTRACT_PREFIX_EDIT,165,90,105,14,ES_AUTOHSCROLL
+    AUTORADIOBUTTON "All Pages",IDC_EXTRACT_PAGE_ALL,15,115,50,10,WS_GROUP
+    AUTORADIOBUTTON "Pages:",IDC_EXTRACT_PAGE_RANGE,75,115,40,10
+    EDITTEXT        IDC_EXTRACT_RANGE_EDIT,120,113,80,14,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "Extract",IDOK,177,170,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,233,170,50,15
+END
+
+// ============================================================================
+// Task 20: Combine PDF Dialog
+// ============================================================================
+IDD_COMBINE_PDF_DIALOG DIALOGEX 0, 0, 360, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Combine PDF Documents"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Source PDF Documents to Merge",IDC_STATIC,7,7,346,145
+    CONTROL         "",IDC_COMBINE_FILE_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,15,20,250,122
+    PUSHBUTTON      "Add Files...",IDC_COMBINE_ADD_BTN,272,20,72,14
+    PUSHBUTTON      "Remove",IDC_COMBINE_REMOVE_BTN,272,38,72,14
+    PUSHBUTTON      "Move Up",IDC_COMBINE_MOVE_UP_BTN,272,56,72,14
+    PUSHBUTTON      "Move Down",IDC_COMBINE_MOVE_DOWN_BTN,272,74,72,14
+    PUSHBUTTON      "Clear All",IDC_COMBINE_CLEAR_BTN,272,92,72,14
+
+    GROUPBOX        "Output Destination",IDC_STATIC,7,156,346,58
+    LTEXT           "Save As:",IDC_STATIC,15,172,35,8
+    EDITTEXT        IDC_COMBINE_OUTPUT_EDIT,55,170,225,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_COMBINE_OUTPUT_BROWSE,285,170,60,14
+    AUTOCHECKBOX    "Open combined document after merging",IDC_COMBINE_OPEN_CHECK,15,192,180,10
+
+    DEFPUSHBUTTON   "Combine & Save",IDOK,235,225,60,15
+    PUSHBUTTON      "Cancel",IDCANCEL,300,225,50,15
+END

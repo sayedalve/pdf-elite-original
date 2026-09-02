@@ -1,0 +1,76 @@
+# ============================================================
+# PDF Elite .gitignore (Native C++)
+# ============================================================
+
+# Build outputs
+native/build/
+build/
+Debug/
+Release/
+*.exe
+*.dll
+*.msi
+*.msix
+*.lib
+*.exp
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Visual Studio / C++ Intermediate Files
+.vs/
+*.obj
+*.pdb
+*.ilk
+*.ipdb
+*.iobj
+*.tlog
+*.idb
+*.recipe
+*.sln
+*.slnx
+*.suo
+*.user
+*.userosscache
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.dir/
+*.pch
+
+# Local caches, temp files, logs
+.cache/
+tmp/
+temp/
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.crash
+
+# Keep third party dlls explicitly tracked for runtime
+!native/third_party/**/*.dll
+!native/third_party/**/*.lib
+
+# Ignore OS generated metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
