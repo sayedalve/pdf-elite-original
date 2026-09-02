@@ -17,7 +17,7 @@ jobs:
     - name: Download PDFium Binaries
       run: |
         Invoke-WebRequest -Uri "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/7999/pdfium-win-x64.tgz" -OutFile "pdfium.tgz"
-        mkdir -p native/third_party/pdfium
+        New-Item -ItemType Directory -Force -Path native/third_party/pdfium
         tar -xf pdfium.tgz -C native/third_party/pdfium
 
     - name: Configure CMake
