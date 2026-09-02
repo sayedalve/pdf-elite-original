@@ -28,7 +28,7 @@ dependencies {
     api 'org.springframework.boot:spring-boot-starter-cache'
     api 'com.github.ben-manes.caffeine:caffeine'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    api 'io.swagger.core.v3:swagger-core-jakarta:2.2.46'
+    api 'io.swagger.core.v3:swagger-core-jakarta:2.2.54'
     implementation "com.bucket4j:bucket4j_jdk17-core:${rootProject.ext.bucket4jVersion}"
     implementation "com.bucket4j:bucket4j_jdk17-lettuce:${rootProject.ext.bucket4jVersion}"
 
