@@ -286,25 +286,33 @@ std::vector<std::shared_ptr<core::interfaces::dom::ITextObject>> PdfPage::GetTex
     
     std::vector<std::shared_ptr<core::interfaces::dom::ITextObject>> result;
     int count = FPDFPage_CountObjects(m_page);
+    fprintf(stderr, "DEBUG: FPDFPage_CountObjects returned %d\n", count);
     
     std::map<std::string, std::shared_ptr<PdfTextObject>> blocks;
     
     for (int i = 0; i < count; ++i) {
+        FPDF_PAGEOBJECT objDebug = FPDFPage_GetObject(m_page, i);
+        fprintf(stderr, "DEBUG: Object %d type is %d\n", i, FPDFPageObj_GetType(objDebug));
         FPDF_PAGEOBJECT obj = FPDFPage_GetObject(m_page, i);
         if (FPDFPageObj_GetType(obj) == FPDF_PAGEOBJ_TEXT) {
             int markCount = FPDFPageObj_CountMarks(obj);
             std::string blockId;
             for (int j = 0; j < markCount; ++j) {
                 FPDF_PAGEOBJECTMARK mark = FPDFPageObj_GetMark(obj, j);
-                char nameBuf[256] = {0};
+                FPDF_WCHAR nameBuf[256] = {0};
                 FPDFPageObjMark_GetName(mark, nameBuf, sizeof(nameBuf), nullptr);
-                if (std::string(nameBuf) == "PDFElite_TextBlock") {
+                std::wstring nameStr = reinterpret_cast<wchar_t*>(nameBuf);
+                if (nameStr == L"PDFElite_TextBlock") {
                     unsigned long len = 0;
                     FPDFPageObjMark_GetParamStringValue(mark, "BlockID", nullptr, 0, &len);
                     if (len > 0) {
-                        std::vector<char> valBuf(len);
+                        std::vector<FPDF_WCHAR> valBuf(len / sizeof(FPDF_WCHAR) + 1, 0);
                         FPDFPageObjMark_GetParamStringValue(mark, "BlockID", valBuf.data(), len, nullptr);
-                        blockId = std::string(valBuf.data(), len - 1);
+                        std::wstring blockIdW = reinterpret_cast<wchar_t*>(valBuf.data());
+                        blockId.reserve(blockIdW.length());
+                        for (wchar_t wc : blockIdW) {
+                            blockId.push_back(static_cast<char>(wc));
+                        }
                     }
                     break;
                 }

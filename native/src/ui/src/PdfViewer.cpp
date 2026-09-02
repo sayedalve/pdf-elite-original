@@ -864,8 +864,8 @@ void PdfViewer::ReloadInteractableObjects() {
     std::vector<std::shared_ptr<ui::interaction::ISelectableObject>> interactables;
     
     // Only load heavy interactables if the current tool actually needs them
-    bool needsText = (m_currentTool == ToolMode::EditText || m_currentTool == ToolMode::AddText);
-    bool needsImages = (m_currentTool == ToolMode::Select || m_currentTool == ToolMode::Eraser);
+    bool needsText = true;
+    bool needsImages = true;
     
     // Load interactable objects from visible pages
     for (const auto& layout : m_layout) {
