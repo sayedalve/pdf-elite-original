@@ -1,0 +1,123 @@
+/* ─── Document Tab Bar ───────────────────────────────────────────────────── */
+
+.document-tab-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  background-color: var(--c-surface-sunken);
+  border-bottom: 1px solid var(--c-border);
+  flex-shrink: 0;
+  gap: 1px;
+  padding: 0 4px;
+}
+
+.document-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Individual Tab Container ───────────────────────────────────────────── */
+
+.document-tab {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  min-width: 80px;
+  max-width: 200px;
+  flex-shrink: 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.12s ease;
+  position: relative;
+}
+
+.document-tab--active {
+  border-bottom-color: var(--p-doc-accent-primary);
+}
+
+/* ─── Tab navigation button ──────────────────────────────────────────────── */
+
+.document-tab__btn {
+  /* Stretch to fill the tab container, minus the close button */
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border-radius: 0 !important;
+  padding: 0 4px 0 8px !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  justify-content: flex-start !important;
+  color: var(--c-text-secondary) !important;
+  background: transparent !important;
+  transition:
+    color 0.12s ease,
+    background 0.12s ease !important;
+}
+
+.document-tab__btn:hover {
+  background: var(--c-surface-hover-selected) !important;
+  color: var(--c-text) !important;
+}
+
+.document-tab--active .document-tab__btn {
+  color: var(--c-text) !important;
+  font-weight: 500 !important;
+}
+
+/* ─── Tab Icon ───────────────────────────────────────────────────────────── */
+
+.document-tab__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 5px;
+  opacity: 0.6;
+  color: var(--p-doc-accent-primary);
+}
+
+.document-tab--active .document-tab__icon {
+  opacity: 1;
+}
+
+/* ─── Tab Name ───────────────────────────────────────────────────────────── */
+
+.document-tab__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Dirty Indicator ────────────────────────────────────────────────────── */
+
+.document-tab__dirty {
+  font-size: 8px;
+  color: var(--p-amber-400);
+  margin-left: 4px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ─── Close ActionIcon ───────────────────────────────────────────────────── */
+
+.document-tab__close {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  flex-shrink: 0;
+  margin: 0 2px;
+  border-radius: 3px !important;
+}
+
+.document-tab:hover .document-tab__close,
+.document-tab--active .document-tab__close {
+  opacity: 0.6;
+}
+
+.document-tab__close:hover {
+  opacity: 1 !important;
+}

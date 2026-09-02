@@ -1,0 +1,32 @@
+#pragma once
+
+#include "ITool.h"
+
+namespace ui::tools {
+
+class FreeTextTool : public ITool {
+public:
+    explicit FreeTextTool(ToolType type = ToolType::FreeText);
+    ~FreeTextTool() override;
+
+    ToolType GetType() const override { return m_type; }
+    std::wstring GetName() const override;
+    ToolState GetState() const override { return m_state; }
+
+    void OnActivate(ToolContext& context) override;
+    void OnDeactivate(ToolContext& context) override;
+    void Cancel(ToolContext& context) override;
+
+    input::EventResult OnPointerDown(const input::PointerEvent& event, ToolContext& context) override;
+    input::EventResult OnPointerMove(const input::PointerEvent& event, ToolContext& context) override;
+    input::EventResult OnPointerUp(const input::PointerEvent& event, ToolContext& context) override;
+
+    HCURSOR GetCursor(const PointF& point, ToolContext& context) const override;
+    void RenderOverlay(ID2D1RenderTarget* renderTarget, ToolContext& context) override;
+
+private:
+    ToolType m_type;
+    ToolState m_state = ToolState::Idle;
+};
+
+} // namespace ui::tools

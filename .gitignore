@@ -1,0 +1,122 @@
+# ============================================================
+# PDF Elite .gitignore
+# ============================================================
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.yarn/
+.pnpm-store/
+
+# Frontend build output
+dist/
+out/
+.output/
+.nuxt/
+.next/
+.svelte-kit/
+.vite/
+frontend/editor/dist/
+frontend/editor/build/
+
+# Java / Gradle
+.gradle/
+app/core/build/
+app/common/build/
+app/proprietary/build/
+app/saas/build/
+build/
+*.jar
+
+# C++ / Native Build Outputs (CMake)
+native/build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Visual Studio / C++ Intermediate Files
+.vs/
+*.obj
+*.pdb
+*.ilk
+*.ipdb
+*.iobj
+*.tlog
+*.idb
+*.recipe
+*.sln
+*.slnx
+*.suo
+*.user
+*.userosscache
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.dir/
+Release/
+Debug/
+
+# Executables and Installers
+*.exe
+*.msi
+*.dll
+*.so
+*.dylib
+# Keep third party dlls if explicitly tracked
+!native/third_party/**/*.dll
+
+# Logs and Temp Files
+*.log
+logs/
+log/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Testing
+playwright-report/
+test-results/
+blob-report/
+coverage/
+.nyc_output/
+*.lcov
+
+# Local caches
+.cache/
+tmp/
+temp/

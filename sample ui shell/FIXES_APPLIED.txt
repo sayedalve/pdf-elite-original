@@ -1,0 +1,48 @@
+
+PHASE 0 - Encoding Fix (CRITICAL - fixes gibberish):
+- BEFORE: L"📁 Open" emoji as wchar_t -> rendered as ðŸ" Open (UTF-8 misread)
+- AFTER: IconSystem with ID2D1PathGeometry vector paths, no emoji text
+- All text now proper ASCII: "Open PDF", "Create PDF", "Recent Files" - no ðŸ"
+- Use Segoe MDL2 Assets for symbols via path geometry, not emoji characters
+
+PHASE 1 - Theme Exact Target:
+- BEFORE: #0f1117 black, blue squares #7d8cff
+- AFTER: #1e1e2f main #171729 sidebar #28283e surface #2b2b42 toolbar #5b8cff accent
+- Icon colors: Edit #f59e0b orange, Convert #10b981 green, OCR #14b8a6 teal, Comments #f87171 red, Translate #8b5cf6 purple, Combine #3b82f6 blue, Compress #22c55e green, Batch #10b981
+
+PHASE 2-3 - Home Sidebar & Quick Tools:
+- BEFORE: blue squares, no desc, gibberish Open
+- AFTER: White Open PDF button 48px radius 10 black text with folder path icon, Create PDF outlined, Quick Tools 4 cols gap 16px card 12px radius #2e2e44, icon 36px radius 10 colored per tool with white vector icon centered, name 14px medium, desc 12px wrapped via IDWriteTextLayout
+
+PHASE 4 - Recent Files:
+- BEFORE: blue squares, Name/Size only
+- AFTER: Search pill 240x32 radius 8 #2a2a3e, table headers Name/Modified Time/Size 12px #8a8aa0 with sort, rows 48px PDF blue icon 24px radius 4, name truncated with ellipsis via TextLayout trimming
+
+PHASE 5 - TopBar:
+- BEFORE: simple text tabs
+- AFTER: 48px #1c1c2e, hamburger 3 lines path, home house path, tabs 260x32 radius 8 #28283e with X close, + new, right avatar blue circle 28px, bell, gear, min/max/close 20px gap 16px hover #2a2a3e
+
+PHASE 6 - Toolbars 4 modes - FIXES gibberish and positioning:
+- BEFORE: "ðŸ- Highlight" "âœŽ" "U â" overlapping fixed 90px width
+- AFTER: Vector path icons via IconSystem::DrawIcon, measure width via IDWriteTextLayout::GetMetrics, gap 4px, separator 1x24 #3a3a4a
+  View: undo curved arrow, redo, zoom minus/plus magnify, hand, rect select, Edit All active bg #3a3a4a Add Text OCR Crop Combine Compress ... Search Tools pill save print cloud upload
+  Comment: Highlight marker, Area Highlight dashed, Pencil, Eraser, Underline U with dropdown, Text T, TextBox, Rectangle, Stamp, etc
+  Edit: Edit All Add Text Add Link Image Watermark Background
+  Organize: undo redo | zoom | 1 dropdown | rotate left/right trash | Extract Split Insert | Crop Rotate Size + 4-col thumb grid
+
+PHASE 7 - Left/Right Rails:
+- BEFORE: text "ðŸ¬" "â°"
+- AFTER: Vector icons: Home rocket path, Comment bubble rounded rect + tail, Edit pencil diagonal, Convert two arrows, View eye, Organize stack, Tools toolbox, Form list - active bg #2a2a3e border 1.5px #5b8cff radius 10
+- RightRail: thumbnails 3 lines, bookmark ribbon, comment bubble, page 14 selected bg #2a2a3e radius 8, 564 total, up/down chevrons, hand, fit, 200%, plus/minus
+
+PHASE 8 - PDF Canvas:
+- BEFORE: no clip, draws over UI
+- AFTER: PushAxisAlignedClip(center), grid 24px rgba(255,255,255,0.03), page white 794x1123 shadow 0 8px 32px rgba(0,0,0,0.4), black PDF for instructor manual, Organize 4-col grid white thumbs radius 6 selected blue border 2px #5b8cff with rotate/trash top actions
+
+Validation vs target image_b8a449:
+- Home Quick Tools 4x2 with colored icons and descriptions ✓
+- Open PDF white ✓
+- Recent Files table with Modified Time Size ✓
+- No gibberish ✓
+- Toolbar properly positioned with separators ✓
+- Icons vector not emoji ✓

@@ -1,0 +1,67 @@
+plugins {
+    id 'java-library'
+}
+
+// NOTE: This module (:common) is a library module, NOT a Spring Boot application.
+// The bootRun task should NOT be configured here. It is only configured in :PDF-Elite.
+// The Spring Boot plugin is applied to all subprojects from root build.gradle, but
+// bootJar is disabled for non-application modules (see root__build.gradle line 196-200).
+// Adding a bootRun block here causes Gradle to try to configure a task that shouldn't
+// exist for this module, resulting in "Could not find method bootRun()" errors.
+
+dependencies {
+    api "com.google.guava:guava:${rootProject.ext.guavaVersion}"
+    api 'org.springframework.boot:spring-boot-starter-webmvc'
+    api 'org.springframework.boot:spring-boot-starter-aspectj'
+    api 'com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20260313.1'
+    api 'com.fathzer:javaluator:3.0.6'
+    api 'com.posthog.java:posthog:1.2.0'
+    api "org.apache.commons:commons-lang3:${rootProject.ext.commonsLang3}"
+    api 'com.drewnoakes:metadata-extractor:2.20.0' // Image metadata extractor
+    api 'com.vladsch.flexmark:flexmark-html2md-converter:0.64.8'
+    api "org.apache.pdfbox:pdfbox:$rootProject.ext.pdfboxVersion"
+    api "org.apache.pdfbox:pdfbox-io:$rootProject.ext.pdfboxVersion"
+    api "org.apache.pdfbox:xmpbox:$rootProject.ext.pdfboxVersion"
+    api "org.apache.pdfbox:preflight:$rootProject.ext.pdfboxVersion"
+    api 'com.github.junrar:junrar:7.6.0' // RAR archive support for CBR files
+    api 'jakarta.servlet:jakarta.servlet-api:6.1.0'
+    api 'org.snakeyaml:snakeyaml-engine:3.0.1'
+    api "org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3"
+    // Simple Java Mail for EML/MSG parsing (replaces direct Angus Mail usage)
+    api 'org.simplejavamail:simple-java-mail:8.12.6'
+    api 'org.simplejavamail:outlook-module:8.12.6' // MSG file support
+    api 'jakarta.mail:jakarta.mail-api:2.1.5'
+    runtimeOnly 'org.eclipse.angus:angus-mail:2.0.5'
+
+    // Tabula table extraction — used by the shared PDF parser and directly by downstream modules.
+    // api-scoped so downstream modules (core, proprietary) retain it on their compile classpath.
+    api ('technology.tabula:tabula:1.0.5') {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
+
+    api "com.stirling:jpdfium:${rootProject.ext.jpdfiumVersion}"
+
+    // -PjpdfiumPlatforms=all|<csv of linux-x64,linux-arm64,darwin-x64,darwin-arm64,windows-x64>
+    def jpdfiumPlatformsProp = (project.findProperty('jpdfiumPlatforms') ?: 'all').toString().trim()
+    def jpdfiumAllPlatforms = ['linux-x64', 'linux-arm64', 'darwin-x64', 'darwin-arm64', 'windows-x64']
+    def jpdfiumPlatforms = jpdfiumPlatformsProp == 'all'
+            ? jpdfiumAllPlatforms
+            : jpdfiumPlatformsProp.split(',').collect { it.trim() }.findAll { it }
+    def jpdfiumInvalid = jpdfiumPlatforms.findAll { !jpdfiumAllPlatforms.contains(it) }
+    if (jpdfiumInvalid) {
+        throw new GradleException("Unknown jpdfiumPlatforms value(s): ${jpdfiumInvalid.join(', ')}. " +
+                "Valid: ${jpdfiumAllPlatforms.join(', ')} or 'all'.")
+    }
+    logger.lifecycle("JPDFium native platforms: ${jpdfiumPlatforms.join(', ')}")
+    jpdfiumPlatforms.each { platform ->
+        runtimeOnly "com.stirling:jpdfium-natives-${platform}:${rootProject.ext.jpdfiumVersion}"
+    }
+
+    // Bucket4j (local in-process token bucket for RateLimitStore default impl)
+    implementation "com.bucket4j:bucket4j_jdk17-core:${rootProject.ext.bucket4jVersion}"
+
+    // ArchUnit: enforces module dependency direction (see ArchitectureTest)
+    testImplementation "com.tngtech.archunit:archunit-junit5:${rootProject.ext.archunitVersion}"
+}

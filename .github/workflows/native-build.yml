@@ -1,0 +1,43 @@
+name: Native PDF Elite CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Download PDFium Binaries
+      run: |
+        Invoke-WebRequest -Uri "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/7999/pdfium-win-x64.tgz" -OutFile "pdfium.tgz"
+        mkdir -p native/third_party/pdfium
+        tar -xf pdfium.tgz -C native/third_party/pdfium
+
+    - name: Configure CMake
+      run: cmake -B ${{github.workspace}}/build -S native -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      run: cmake --build ${{github.workspace}}/build --config Release
+
+    - name: Run Regression Suite
+      run: ${{github.workspace}}/build/tests/Release/RegressionSuite.exe
+      
+    - name: Upload Test Artifacts
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-artifacts
+        path: native/tests/fixtures/
+
+    - name: Package Application
+      run: cpack -C Release --config build/CPackConfig.cmake -B build/installer
+      working-directory: native
+
+    - name: Check Installer Size
+      run: pwsh native/scripts/check_size.ps1 -InstallerPath ${{github.workspace}}/build/installer/PDFEliteSetup.exe

@@ -1,0 +1,38 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 28, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "ninja-debug",
+      "displayName": "Ninja (Debug)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "ninja-relwithdebinfo",
+      "displayName": "Ninja (RelWithDebInfo)",
+      "inherits": "ninja-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
+      "name": "ninja-release",
+      "displayName": "Ninja (Release)",
+      "inherits": "ninja-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "PDFELITE_USE_LTO": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "debug", "configurePreset": "ninja-debug" },
+    { "name": "relwithdebinfo", "configurePreset": "ninja-relwithdebinfo" },
+    { "name": "release", "configurePreset": "ninja-release" }
+  ]
+}

@@ -1,0 +1,3414 @@
+﻿======================================
+ PDF Elite Native Regression Suite
+======================================
+
+Running: Challenge1_1_ToolSwitchPointerStateTransitions... Func returned!
+PASS (2.3221 ms)
+Running: Challenge1_2_ToolSwitchCancelsActiveInteractions... ~PdfViewer start
+~PdfViewer end
+Func returned!
+PASS (2.1089 ms)
+Running: Challenge1_3_RapidToolSwitching500CyclesStress... ~PdfViewer start
+~PdfViewer end
+Func returned!
+PASS (1.4137 ms)
+Running: Challenge2_1_TextCreationPrecisionAndReloadVerification... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 000002C4761C8B10 with parent 000002C475C59170
+Returning textObjs
+~PdfPage start 000002C4761C8B10 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 000002C475C59170
+GetPage created 000002C475C31B50 with parent 000002C475C59170
+Returning textObjs
+~PdfPage start 000002C475C31B50 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: std::abs(bounds.bottom - 400.0f) < 2.0f
+Running: Challenge2_2_TextInPlaceEditMultilinePreservationAndSaving... Created PdfDocument 000002C4761C9C10
+GetPage created 000002C475C31B50 with parent 000002C4761C9C10
+~PdfPage start 000002C475C31B50 with parent 000002C4761C9C10
+ReleasePage start 000002C4761C9C10
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 000002C475C31B50 with parent 000002C4761C9C10
+Returning textObjs
+~PdfPage start 000002C475C31B50 with parent 000002C4761C9C10
+ReleasePage start 000002C4761C9C10
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 000002C4761C9C10
+GetPage created 000002C4760F3720 with parent 000002C4761C9C10
+Returning textObjs
+~PdfPage start 000002C4760F3720 with parent 000002C4761C9C10
+ReleasePage start 000002C4761C9C10
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (29.6035 ms)
+Running: Challenge2_3_AtomicSaveFileSafetyAndTmpCleanup... Created PdfDocument 000002C475C59170
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (40.8866 ms)
+Running: Challenge3_1_TextUndoRedoCompleteDetachmentFromDocumentTree... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C31B50 with parent 000002C475C59170
+Returning textObjs
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+Returning textObjs
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+Returning textObjs
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+~PdfPage start 000002C475C31B50 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (5.3057 ms)
+Running: Challenge3_2_AnnotationUndoRedoCompleteDetachment... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C31B50 with parent 000002C475C59170
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 000002C475C31B50 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (4.9041 ms)
+Running: Challenge3_3_ConsecutiveUndoRedo100CyclesStress... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C31B50 with parent 000002C475C59170
+GetPage created 000002C475C2E030 with parent 000002C475C59170
+~PdfPage start 000002C475C2E030 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B7C0 with parent 000002C475C59170
+~PdfPage start 000002C475C5B7C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B7C0 with parent 000002C475C59170
+~PdfPage start 000002C475C5B7C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760FEC10 with parent 000002C475C59170
+~PdfPage start 000002C4760FEC10 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760FEC10 with parent 000002C475C59170
+~PdfPage start 000002C4760FEC10 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C2E030 with parent 000002C475C59170
+~PdfPage start 000002C475C2E030 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C475C5B7C0 with parent 000002C475C59170
+~PdfPage start 000002C475C5B7C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B7C0 with parent 000002C475C59170
+~PdfPage start 000002C475C5B7C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B7C0 with parent 000002C475C59170
+~PdfPage start 000002C475C5B7C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C475C5B850 with parent 000002C475C59170
+~PdfPage start 000002C475C5B850 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B850 with parent 000002C475C59170
+~PdfPage start 000002C475C5B850 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C475C5B850 with parent 000002C475C59170
+~PdfPage start 000002C475C5B850 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4761C8B10 with parent 000002C475C59170
+~PdfPage start 000002C4761C8B10 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4761C8B10 with parent 000002C475C59170
+~PdfPage start 000002C4761C8B10 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 000002C4760F32F0 with parent 000002C475C59170
+~PdfPage start 000002C4760F32F0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+~PdfPage end
+Returning textObjs
+~PdfPage start 000002C475C31B50 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (114.587 ms)
+Running: Challenge4_1_Selection9HandlesGeometry... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C448C0 with parent 000002C475C59170
+~PdfPage start 000002C475C448C0 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: resTL == ui::interaction::HitResult::Handle
+Running: Challenge4_2_DragMoveNoObjectDuplicationOrMemoryLeak... Created PdfDocument 000002C475C59170
+GetPage created 000002C475C60000 with parent 000002C475C59170
+Returning textObjs
+~PdfPage start 000002C475C60000 with parent 000002C475C59170
+ReleasePage start 000002C475C59170
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (5.2218 ms)
+Running: Challenge5_1_ExtremeZoomZeroDriftRoundtrip... Func returned!
+PASS (1.4098 ms)
+Running: Challenge5_2_RectConversionZeroDriftRoundtrip... Func returned!
+PASS (1.2832 ms)
+Running: Challenge5_3_ExtremeScrollOffsetsZeroDrift... Func returned!
+PASS (1.2906 ms)
+
+======================================
+Results: 12 passed, 2 failed, 0 skipped, 0 not implemented.

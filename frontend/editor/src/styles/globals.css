@@ -1,0 +1,49 @@
+@import "./design-tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--app-bg);
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Professional scrollbar */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+/* Focus */
+*:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-strong);
+}
+
+/* Ensure color swatches (especially black ones) are always visible on dark backgrounds */
+.mantine-ColorPicker-swatch,
+.mantine-ColorSwatch-root {
+  box-shadow: 0 0 0 1px var(--border-strong) inset !important;
+}

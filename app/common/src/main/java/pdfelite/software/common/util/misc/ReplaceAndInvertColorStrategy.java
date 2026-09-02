@@ -1,0 +1,26 @@
+package pdfelite.software.common.util.misc;
+
+import java.io.IOException;
+
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.web.multipart.MultipartFile;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import pdfelite.software.common.model.api.PDFFile;
+import pdfelite.software.common.model.api.misc.ReplaceAndInvert;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public abstract class ReplaceAndInvertColorStrategy extends PDFFile {
+
+    protected ReplaceAndInvert replaceAndInvert;
+
+    public ReplaceAndInvertColorStrategy(MultipartFile file, ReplaceAndInvert replaceAndInvert) {
+        setFileInput(file);
+        this.replaceAndInvert = replaceAndInvert;
+    }
+
+    public abstract InputStreamResource replace() throws IOException;
+}

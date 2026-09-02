@@ -1,0 +1,43 @@
+
+FIXES APPLIED - Gibberish + Crash
+
+1. Gibberish Fix - Hugeicons Database:
+- BEFORE: L"📁 Open PDF" emoji as wchar_t -> rendered as ðŸ" Open (UTF-8 misread as ANSI) + all icons same square □
+- AFTER: Hugeicons.h database + IconSystem with vector ID2D1PathGeometry, no emoji text
+  Hugeicons names: edit-02, exchange-02, ocr, comment-02, translate, file-02 etc
+  Each icon distinct path:
+  - Edit: document rect + pencil diagonal M5 2 L15 2 L15 9 L10 14 L5 14 + M12 9 L18 3 L20 5 L14 11
+  - Convert: two arrows opposite M3 7 L15 7 arrow heads M12 4 L15 7 L12 10 + M17 13 L5 13 opposite
+  - OCR: T M4 3 L16 3 M10 3 L10 10 + scan corners
+  - Comment: bubble M2 2 L18 2 L18 11 L12 11 L8 15 L8 11 L2 11 + inner lines
+  - Translate: A shape + globe arc
+  - Combine: two docs overlapping
+  - Compress: lines + down arrow
+  - Batch: 4 squares grid
+- All icons 20x20 viewBox, stroke 1.5px, rounded, consistent Hugeicons style
+- Text now proper ASCII: "Open PDF" "Create PDF" "Recent Files" "Quick Tools" - no ðŸ" or â
+
+2. Crash Fix:
+- Root cause 1: IconSystem::DrawIcon called with factory=nullptr (AppShell passed nullptr) -> CreateGeometry fails -> access violation
+  Fix: null checks if (!rt || !factory || !brush) return; if (rect invalid) return; HRESULT checks
+- Root cause 2: MainWindow.cpp used m_theme->fmtMedium but m_theme is object not pointer -> m_theme.fmtMedium correct
+  Fix: Changed all m_theme-> to m_theme. (Theme is object)
+- Root cause 3: CreateDeviceResources didn't check rc.right==0 -> CreateHwndRenderTarget with 0 size crashes
+  Fix: if (rc.right==0 || rc.bottom==0) return S_OK; check w>0 h>0 in OnResize
+- Root cause 4: Brushes not initialized before use -> access violation
+  Fix: if (!m_theme.brushAppBg) return; if (!bg) continue; check each brush before use
+- Root cause 5: TextLayout with invalid rect width <=0 crashes
+  Fix: if (contentRight <= contentLeft) return; if (cardW <=0) return; check rect.right > rect.left
+- Root cause 6: D2D1 factory null in DrawIcon
+  Fix: Pass m_d2dFactory.Get() not nullptr, check in DrawIcon
+
+3. Viewer Page - Was Empty:
+- BEFORE: TopBar, Toolbar, LeftRail, RightRail only FillRectangle, no icons/text -> empty black
+- AFTER: Full implementation:
+  TopBar 48px #1c1c2e: hamburger 3 lines rect, home house, tabs 260x32 radius 8 #28283e with X close + + new, right avatar blue 28px + bell + gear + min/max/close 20px gap 16px hover #2a2a3e
+  Toolbar 48px #2b2b42: View/Comment/Edit/Organize modes with proper items Undo Redo | Zoom | Hand Rect | Edit All Add Text etc | Search Tools pill save print cloud upload - measured width, separators 1x24
+  LeftRail 64px: 8 items 56px icon 20x20 distinct Hugeicons paths, label 10px uppercase, active bg #2a2a3e border 1.5px #5b8cff radius 10
+  RightRail 48px: page 14 selected bg #2a2a3e radius 8 + 564 total, zoom 200%, icons
+  Center: bg #1e1e2f grid 24px, PDF white page shadow 0 8px 32px, clipped PushAxisAlignedClip, black content with white text, thumbnail grid 4 cols blue selected border
+
+Build now stable, no crash, no gibberish, Hugeicons distinct

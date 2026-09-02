@@ -1,0 +1,216 @@
+/* PDF Elite Design System - Professional Desktop PDF Viewer
+   Authority: pdf-viewer-ui-ux-skill.md
+   Style: Refined Minimalism, Density 5, Blue accent #79AEFF
+*/
+
+:root {
+  /* App Chrome */
+  --app-bg: #1e2130;
+  --app-bg-elevated: #252836;
+  --workspace-bg: #1e2130;
+  --workspace-paper-bg: #2a2e42;
+  --surface-elevated: #2a2d3f;
+  --surface-card: #2f334a;
+  --surface-hover: #343a56;
+  --surface-selected: #3a4064;
+  --surface-pressed: #3f466e;
+
+  /* Text */
+  --text-primary: #e8e9f0;
+  --text-secondary: #9aa0b8;
+  --text-tertiary: #6b7190;
+  --text-disabled: #4a4f6a;
+  --text-inverse: #1a1d29;
+
+  /* Borders */
+  --border: #2f334a;
+  --border-strong: #3a4060;
+  --border-subtle: #262a40;
+
+  /* Accent - PDF Elite Blue */
+  --accent: #79aeff;
+  --accent-hover: #8ab8ff;
+  --accent-pressed: #5e9bf0;
+  --accent-subtle: rgba(121, 174, 255, 0.12);
+  --accent-strong: rgba(121, 174, 255, 0.2);
+  --focus-ring: #79aeff;
+  --focus-ring-offset: #1e2130;
+
+  /* Semantic */
+  --destructive: #ff6b6b;
+  --destructive-hover: #ff7d7d;
+  --success: #4ade80;
+  --warning: #fbbf24;
+
+  /* Toolbar */
+  --toolbar-bg: #252836;
+  --toolbar-border: #2f334a;
+  --toolbar-height: 44px;
+
+  /* Tabs */
+  --tab-bar-bg: #1e2130;
+  --tab-bar-height: 38px;
+  --tab-active-bg: #2a2e42;
+  --tab-inactive-bg: transparent;
+  --tab-active-text: var(--text-primary);
+  --tab-inactive-text: var(--text-secondary);
+
+  /* Sidebar */
+  --sidebar-bg: #1c1e2c;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 64px;
+  --sidebar-item-hover: #2a2d3f;
+  --sidebar-item-active: #2f334a;
+  --sidebar-item-active-border: var(--accent);
+
+  /* Viewer Rails */
+  --viewer-left-rail-bg: #1c1e2c;
+  --viewer-left-rail-width: 72px;
+  --viewer-right-rail-bg: #252836;
+  --viewer-right-rail-width: 320px;
+
+  /* Page */
+  --page-bg: #ffffff;
+  --page-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --page-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --page-gap: 24px;
+
+  /* Scrollbar */
+  --scrollbar: #3a4060;
+  --scrollbar-hover: #4a5070;
+  --scrollbar-thumb: #343a56;
+
+  /* Spacing - 4px base */
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans:
+    "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", monospace;
+
+  /* Type Scale */
+  --text-2xs: 10px;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.2;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.5;
+  --leading-loose: 1.6;
+
+  /* Icon Sizes */
+  --icon-xs: 14px;
+  --icon-sm: 16px;
+  --icon-md: 18px;
+  --icon-lg: 20px;
+  --icon-xl: 24px;
+  --icon-2xl: 28px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 100ms;
+  --duration-normal: 150ms;
+  --duration-slow: 200ms;
+  --duration-slower: 300ms;
+
+  /* Z-index */
+  --z-toolbar: 100;
+  --z-sidebar: 200;
+  --z-modal: 300;
+  --z-tooltip: 400;
+  --z-toast: 500;
+}
+
+/* Light theme override (for future) */
+@media (prefers-color-scheme: light) {
+  :root[data-theme="light"] {
+    --app-bg: #f5f6f8;
+    --workspace-bg: #ebedf0;
+    --surface-elevated: #ffffff;
+    /* ... light tokens ... */
+  }
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  background: var(--app-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-strong);
+  color: var(--text-primary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

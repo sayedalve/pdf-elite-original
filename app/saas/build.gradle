@@ -1,0 +1,19 @@
+plugins {
+    id 'java-library'
+}
+
+// NOTE: This module (:saas) is a library module, NOT a Spring Boot application.
+// The bootJar and bootRun tasks are disabled for non-application modules.
+
+dependencies {
+    api project(':common')
+    api project(':proprietary')
+
+    api 'org.springframework.boot:spring-boot-starter-security'
+    api 'org.springframework.boot:spring-boot-starter-data-jpa'
+    api 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    api 'org.springframework.boot:spring-boot-starter-webmvc'
+    api 'org.springframework.boot:spring-boot-starter-aspectj'
+
+    testImplementation "com.tngtech.archunit:archunit-junit5:${rootProject.ext.archunitVersion}"
+}

@@ -1,0 +1,194 @@
+version: '3'
+
+vars:
+  ROOT_DIR: '{{.ROOT_DIR | default "."}}'
+
+tasks:
+  install:
+    desc: "Install Playwright browsers"
+    dir: frontend/editor
+    deps: [ ':frontend:install' ]
+    cmds:
+      - npx playwright install {{.CLI_ARGS}} --with-deps
+
+  stubbed:
+    desc: "Run stubbed E2E tests"
+    dir: frontend/editor
+    deps: [ ':frontend:prepare' ]
+    cmds:
+      - npx playwright test --project=stubbed {{.CLI_ARGS}}
+
+  live:
+    desc: "Run live E2E tests"
+    summary: |
+      Auto-spawns a Spring Boot backend with isolated state under
+      .test-state/playwright/ (purged on every run) so the suite doesn't
+      touch your local DB, settings.yml, backups or customFiles. The
+      backend is stopped automatically when the runner exits.
+
+      Pass extra Playwright flags via -- :
+        task e2e:live -- --headed --grep merge
+    deps:
+      - live:backend
+      - live:runner
+
+  live:backend:
+    internal: true
+    ignore_error: true
+    vars:
+      BASE_DIR: '{{.ROOT_DIR}}/.test-state/playwright'
+    env:
+      STIRLING_BASE_PATH: '{{.BASE_DIR}}'
+      SYSTEM_ENABLEANALYTICS: "false"
+    cmds:
+      - |
+        bash -c '
+          set -e
+          rm -rf "{{.BASE_DIR}}"
+          mkdir -p "{{.BASE_DIR}}"
+          GRADLE_ARGS=":pdf-elite:bootRun"
+          if [ -n "${COVERAGE:-}" ]; then
+            GRADLE_ARGS="$GRADLE_ARGS -PjacocoAgent=true -PjacocoExec={{.BASE_DIR}}/jacoco.exec"
+            echo "JaCoCo coverage enabled, writing to {{.BASE_DIR}}/jacoco.exec"
+          fi
+          bash gradlew $GRADLE_ARGS > "{{.BASE_DIR}}/backend.log" 2>&1 &
+          GRADLE_PID=$!
+          echo $GRADLE_PID > "{{.BASE_DIR}}/backend.pid"
+          wait $GRADLE_PID
+        '
+
+  live:runner:
+    internal: true
+    deps: [ ':frontend:prepare' ]
+    dir: frontend/editor
+    vars:
+      BASE_DIR: '{{.ROOT_DIR}}/.test-state/playwright'
+    cmds:
+      - |
+        bash -c '
+          set +e
+          kill_tree() {
+            local pid=$1
+            for child in $(pgrep -P "$pid" 2>/dev/null); do
+              kill_tree "$child"
+            done
+            kill "$pid" 2>/dev/null || true
+          }
+          cleanup() {
+            if [ -f "{{.BASE_DIR}}/backend.pid" ]; then
+              echo "Stopping backend..."
+              kill_tree "$(cat "{{.BASE_DIR}}/backend.pid")"
+              sleep 1
+              lsof -ti:8080 2>/dev/null | xargs kill 2>/dev/null || true
+              echo "Backend stopped"
+            fi
+          }
+          trap cleanup EXIT INT TERM
+
+          echo "Waiting for backend on :8080 (up to 10min; first compile can be slow)..."
+          WAITED=0
+          while [ $WAITED -lt 600 ]; do
+            if curl -sf http://localhost:8080/api/v1/info/status 2>/dev/null | grep -q UP; then
+              echo "Backend ready, starting Playwright"
+              break
+            fi
+            if [ -f "{{.BASE_DIR}}/backend.pid" ]; then
+              BACKEND_PID=$(cat "{{.BASE_DIR}}/backend.pid")
+              if ! kill -0 "$BACKEND_PID" 2>/dev/null; then
+                echo "Backend process exited before becoming ready; last 100 log lines:"
+                tail -100 "{{.BASE_DIR}}/backend.log" 2>/dev/null || true
+                exit 1
+              fi
+            fi
+            sleep 2
+            WAITED=$((WAITED + 2))
+          done
+          if [ $WAITED -ge 600 ]; then
+            echo "Backend did not become ready within 10min, aborting"
+            exit 1
+          fi
+
+          npx playwright test --project=live "$@"
+        ' bash {{.CLI_ARGS}}
+
+  enterprise:
+    desc: "Run enterprise E2E tests"
+    dir: frontend/editor
+    deps: [ ':frontend:prepare' ]
+    cmds:
+      - npx playwright test --project=enterprise {{.CLI_ARGS}}
+
+  cross-browser:
+    desc: "Run stubbed E2E tests on Chromium, Firefox, and WebKit"
+    dir: frontend/editor
+    deps: [ ':frontend:prepare' ]
+    cmds:
+      - npx playwright test --project=stubbed --project=stubbed-firefox --project=stubbed-webkit {{.CLI_ARGS}}
+
+  check:
+    desc: "Run all E2E tests not requiring Docker"
+    cmds:
+      - task: stubbed
+      - task: live
+
+  check:all:
+    desc: "Run all E2E tests"
+    cmds:
+      - task: stubbed
+      - task: live
+      - task: enterprise
+
+  oauth:up:
+    desc: "Start the OAuth keycloak test environment"
+    ignore_error: true
+    cmds:
+      - bash testing/compose/start-oauth-test.sh {{if .LICENSE_KEY}}--license-key "{{.LICENSE_KEY}}"{{end}} {{.CLI_ARGS}}
+
+  oauth:down:
+    desc: "Stop the OAuth keycloak test environment"
+    cmds:
+      - docker compose -f testing/compose/docker-compose-keycloak-oauth.yml down -v
+
+  saml:up:
+    desc: "Start the SAML keycloak test environment"
+    ignore_error: true
+    cmds:
+      - bash testing/compose/start-saml-test.sh {{if .LICENSE_KEY}}--license-key "{{.LICENSE_KEY}}"{{end}} {{.CLI_ARGS}}
+
+  saml:down:
+    desc: "Stop the SAML keycloak test environment"
+    cmds:
+      - docker compose -f testing/compose/docker-compose-keycloak-saml.yml down -v
+
+  mcp:up:
+    desc: "Start the MCP keycloak test environment"
+    ignore_error: true
+    cmds:
+      - bash testing/compose/start-mcp-test.sh {{if .LICENSE_KEY}}--license-key "{{.LICENSE_KEY}}"{{end}} {{.CLI_ARGS}}
+
+  mcp:manual:
+    desc: "Start the MCP keycloak test env in manual mode"
+    ignore_error: true
+    cmds:
+      - bash testing/compose/start-mcp-test.sh --manual {{if .LICENSE_KEY}}--license-key "{{.LICENSE_KEY}}"{{end}} {{.CLI_ARGS}}
+
+  mcp:apikey:
+    desc: "Start the MCP test env in API-KEY manual mode"
+    ignore_error: true
+    cmds:
+      - bash testing/compose/start-mcp-test.sh --apikey {{if .LICENSE_KEY}}--license-key "{{.LICENSE_KEY}}"{{end}} {{.CLI_ARGS}}
+
+  mcp:validate:
+    desc: "Validate the running MCP keycloak test environment end-to-end"
+    cmds:
+      - bash testing/compose/validate-mcp-test.sh
+
+  mcp:validate-apikey:
+    desc: "Validate the MCP server in API-KEY auth mode"
+    cmds:
+      - bash testing/compose/validate-mcp-apikey.sh
+
+  mcp:down:
+    desc: "Stop the MCP keycloak test environment"
+    cmds:
+      - docker compose -f testing/compose/docker-compose-keycloak-mcp.yml down -v

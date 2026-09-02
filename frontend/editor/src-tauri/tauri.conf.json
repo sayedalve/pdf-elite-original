@@ -1,0 +1,106 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "PDF Elite",
+  "mainBinaryName": "PDF Elite",
+  "version": "2.14.2",
+  "identifier": "com.pdfelite.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm ci && npx vite --mode desktop",
+    "beforeBuildCommand": "npx vite build --mode desktop"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "PDF Elite",
+        "width": 1280,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "dragDropEnabled": false,
+        "visible": false,
+        "additionalBrowserArgs": "--enable-features=CertVerifierBuiltinFeature"
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "createUpdaterArtifacts": false,
+    "publisher": "PDF Elite",
+    "targets": ["deb", "rpm", "appimage", "dmg", "app", "nsis"],
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.icns",
+      "icons/icon.ico",
+      "icons/16x16.png",
+      "icons/32x32.png",
+      "icons/64x64.png",
+      "icons/128x128.png",
+      "icons/192x192.png"
+    ],
+    "resources": ["libs/*.jar", "runtime/jre/**/*"],
+    "fileAssociations": [
+      {
+        "ext": ["pdf"],
+        "name": "PDF Document",
+        "role": "Editor",
+        "mimeType": "application/pdf"
+      }
+    ],
+    "linux": {
+      "deb": {
+        "desktopTemplate": "pdf-elite.desktop"
+      },
+      "rpm": {
+        "desktopTemplate": "pdf-elite.desktop",
+        "compression": { "type": "zstd", "level": 3 }
+      },
+      "appimage": {
+        "bundleMediaFramework": false
+      }
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "http://timestamp.digicert.com",
+      "wix": {
+        "upgradeCode": "536b4036-0d30-4fa5-b98e-515bda99f8b7",
+        "bannerPath": "windows/wix/banner.bmp",
+        "dialogImagePath": "windows/wix/dialog.bmp",
+        "fragmentPaths": ["windows/wix/provisioning.wxs"],
+        "componentGroupRefs": ["ProvisioningComponentGroup"]
+      }
+    },
+    "macOS": {
+      "minimumSystemVersion": "10.15",
+      "signingIdentity": null,
+      "entitlements": null,
+      "providerShortName": null,
+      "infoPlist": "Info.plist"
+    }
+  },
+  "plugins": {
+    "shell": {
+      "open": true
+    },
+    "fs": {
+      "requireLiteralLeadingDot": false
+    },
+    "deep-link": {
+      "desktop": {
+        "schemes": ["pdfelite"]
+      }
+    },
+    "updater": {
+      "endpoints": [
+        "https://github.com/sayedalve/PDF-Elite/releases/latest/download/latest.json"
+      ],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEVEQTUxNTc2NzMyMjczMDcxCnJXUnRhRzRvMWlKbG9PZUxLb3lKNmFwTnBqNzhwbEhFRjhCcjZaQ0t4S0ZQeUdDcldQdXJZdjcK",
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

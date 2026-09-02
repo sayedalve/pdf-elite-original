@@ -1,0 +1,644 @@
+
+--- RENDERING PERF BASELINE ---
+File: tests/fixtures/perf/1_page.pdf
+Created PdfDocument 0000017E42103E50
+  Load Time: 2.1764 ms
+GetPage created 0000017E43CCEBC0 with parent 0000017E42103E50
+  First Page Render Time: 19.8507 ms
+  Thumbnail Render Time: 11.6418 ms
+~PdfPage start 0000017E43CCEBC0 with parent 0000017E42103E50
+ReleasePage start 0000017E42103E50
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+File: tests/fixtures/perf/10_page.pdf
+Created PdfDocument 0000017E42128970
+  Load Time: 1.4489 ms
+GetPage created 0000017E43CCF610 with parent 0000017E42128970
+  First Page Render Time: 14.0996 ms
+  Thumbnail Render Time: 7.553 ms
+~PdfPage start 0000017E43CCF610 with parent 0000017E42128970
+ReleasePage start 0000017E42128970
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+File: tests/fixtures/perf/50_page.pdf
+Created PdfDocument 0000017E42128970
+  Load Time: 0.7339 ms
+GetPage created 0000017E43CCF1F0 with parent 0000017E42128970
+  First Page Render Time: 11.6183 ms
+  Thumbnail Render Time: 7.8143 ms
+~PdfPage start 0000017E43CCF1F0 with parent 0000017E42128970
+ReleasePage start 0000017E42128970
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+File: tests/fixtures/perf/100_page.pdf
+Created PdfDocument 0000017E42128970
+  Load Time: 0.5806 ms
+GetPage created 0000017E43CAD860 with parent 0000017E42128970
+  First Page Render Time: 14.1753 ms
+  Thumbnail Render Time: 9.1789 ms
+~PdfPage start 0000017E43CAD860 with parent 0000017E42128970
+ReleasePage start 0000017E42128970
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+File: tests/fixtures/perf/text_heavy.pdf
+Created PdfDocument 0000017E42128970
+  Load Time: 0.4581 ms
+GetPage created 0000017E43CAD650 with parent 0000017E42128970
+  First Page Render Time: 13.8292 ms
+  Thumbnail Render Time: 6.8644 ms
+~PdfPage start 0000017E43CAD650 with parent 0000017E42128970
+ReleasePage start 0000017E42128970
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+File: tests/fixtures/perf/image_heavy.pdf
+Created PdfDocument 0000017E42128970
+  Load Time: 0.8611 ms
+GetPage created 0000017E43CAD390 with parent 0000017E42128970
+  First Page Render Time: 1.5341 ms
+  Thumbnail Render Time: 0.6901 ms
+~PdfPage start 0000017E43CAD390 with parent 0000017E42128970
+ReleasePage start 0000017E42128970
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+-------------------------------
+======================================
+ PDF Elite Native Regression Suite
+======================================
+
+Running: Security_EmptyFile_HandledSafely... [LoadFromFile] Invalid format
+[LoadFromFile] Invalid format FPDF_LoadCustomDocument
+Func returned!
+PASS (0.601 ms)
+Running: Security_TruncatedFile_HandledSafely... Created PdfDocument 0000017E42128970
+[LoadFromFile] Invalid format
+[LoadFromFile] Invalid format FPDF_LoadCustomDocument
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (1.3447 ms)
+Running: Security_CorruptFile_HandledSafely... Created PdfDocument 0000017E42128970
+[LoadFromFile] Invalid format
+[LoadFromFile] Invalid format FPDF_LoadCustomDocument
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (1.0266 ms)
+Running: Core_LoadMinimalPDF... Created PdfDocument 0000017E43CCEB40
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.7746 ms)
+Running: Core_SaveAsAndReopen... Created PdfDocument 0000017E43CCEB40
+Created PdfDocument 0000017E43CC6290
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (30.9678 ms)
+Running: Core_SaveAsFailure... Created PdfDocument 0000017E43CD3F10
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.7987 ms)
+Running: Core_CommandStackDirtyState... Created PdfDocument 0000017E43CD4A90
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.6601 ms)
+Running: Page_ExtractPageSize... Created PdfDocument 0000017E43CD47B0
+GetPage created 0000017E43CADD30 with parent 0000017E43CD47B0
+~PdfPage start 0000017E43CADD30 with parent 0000017E43CD47B0
+ReleasePage start 0000017E43CD47B0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.1335 ms)
+Running: Page_Rotation... Created PdfDocument 0000017E43CD47B0
+GetPage created 0000017E43CAD440 with parent 0000017E43CD47B0
+~PdfPage start 0000017E43CAD440 with parent 0000017E43CD47B0
+ReleasePage start 0000017E43CD47B0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (3.6524 ms)
+Running: Page_InsertBlankPage... Created PdfDocument 0000017E43CD3F10
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (22.932 ms)
+Running: Page_DeletePage... Created PdfDocument 0000017E43CD4080
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (1.1831 ms)
+Running: Page_DuplicatePage... Created PdfDocument 0000017E43CD4360
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.801 ms)
+Running: Page_MovePage... Created PdfDocument 0000017E43CD4C00
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.7579 ms)
+Running: Page_RotatePageAPI... Created PdfDocument 0000017E43CD4A90
+GetPage created 0000017E43CAD180 with parent 0000017E43CD4A90
+~PdfPage start 0000017E43CAD180 with parent 0000017E43CD4A90
+ReleasePage start 0000017E43CD4A90
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.1221 ms)
+Running: Document_ExtractPages... Created PdfDocument 0000017E43CD4A90
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.956 ms)
+Running: Document_MergeInsertPagesFrom... Created PdfDocument 0000017E43CD41F0
+Created PdfDocument 0000017E43CD47B0
+~PdfDocument start
+~PdfDocument end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.302 ms)
+Running: Perf_PdfOpen... Created PdfDocument 0000017E43CD4920
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD4080
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD41F0
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD4C00
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD3F10
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD4080
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD44D0
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD41F0
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD41F0
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD4A90
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (6.3853 ms)
+Running: Perf_Save... Created PdfDocument 0000017E43CD4A90
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (96.2633 ms)
+Running: Text_ExtractBasicText... Created PdfDocument 0000017E43CD44D0
+GetPage created 0000017E43CAD440 with parent 0000017E43CD44D0
+~PdfPage start 0000017E43CAD440 with parent 0000017E43CD44D0
+ReleasePage start 0000017E43CD44D0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.9105 ms)
+Running: Text_ExtractUnicodeText... Created PdfDocument 0000017E43CD4920
+GetPage created 0000017E43CADDE0 with parent 0000017E43CD4920
+~PdfPage start 0000017E43CADDE0 with parent 0000017E43CD4920
+ReleasePage start 0000017E43CD4920
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (3.5056 ms)
+Running: Text_EditBasicText... Created PdfDocument 0000017E43CD4360
+GetPage created 0000017E43CADDE0 with parent 0000017E43CD4360
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+Found text: Hello PDF Elite
+This is a second line.
+1234567890
+~PdfPage start 0000017E43CADDE0 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: newText == L"Hello PDF Elite"
+Running: Command_BasicUndoRedo... Created PdfDocument 0000017E43CD4360
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.7118 ms)
+Running: Command_RedoInvalidation... Created PdfDocument 0000017E43CD4A90
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (0.6768 ms)
+Running: Search_BasicMatch... Created PdfDocument 0000017E43CD4360
+GetPage created 0000017E43CADF40 with parent 0000017E43CD4360
+~PdfPage start 0000017E43CADF40 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (4.082 ms)
+Running: Search_CaseSensitivity... Created PdfDocument 0000017E43CD4C00
+GetPage created 0000017E43CAD700 with parent 0000017E43CD4C00
+~PdfPage start 0000017E43CAD700 with parent 0000017E43CD4C00
+ReleasePage start 0000017E43CD4C00
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+GetPage created 0000017E43CAD700 with parent 0000017E43CD4C00
+~PdfPage start 0000017E43CAD700 with parent 0000017E43CD4C00
+ReleasePage start 0000017E43CD4C00
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (5.0057 ms)
+Running: HotReload_ThemeValid... Func returned!
+PASS (0.2801 ms)
+Running: HotReload_ThemeInvalid... Func returned!
+PASS (0.3205 ms)
+Running: Interaction_Selection_Basic... Func returned!
+PASS (0.2661 ms)
+Running: Interaction_Selection_Marquee... Func returned!
+PASS (0.2769 ms)
+Running: Interaction_Selection_TransformGeometry... Func returned!
+PASS (0.3914 ms)
+Running: Annotation_AddTextMarkups... Created PdfDocument 0000017E43CD4360
+GetPage created 0000017E43CADD30 with parent 0000017E43CD4360
+~PdfPage start 0000017E43CADD30 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (20.6338 ms)
+Running: Annotation_SaveReopen... Created PdfDocument 0000017E43CD41F0
+GetPage created 0000017E43CAD2E0 with parent 0000017E43CD41F0
+~PdfPage start 0000017E43CAD2E0 with parent 0000017E43CD41F0
+ReleasePage start 0000017E43CD41F0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: quads.size() > 0
+Running: Annotation_AddFreeTextAndNote... Created PdfDocument 0000017E43CD4360
+GetPage created 0000017E43CADA70 with parent 0000017E43CD4360
+~PdfPage start 0000017E43CADA70 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (22.786 ms)
+Running: Annotation_SaveReopenFreeText... Created PdfDocument 0000017E43CD47B0
+GetPage created 0000017E43CADDE0 with parent 0000017E43CD47B0
+~PdfPage start 0000017E43CADDE0 with parent 0000017E43CD47B0
+ReleasePage start 0000017E43CD47B0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.7281 ms)
+Running: Annotation_Modify... Created PdfDocument 0000017E43CD4080
+GetPage created 0000017E43CADD30 with parent 0000017E43CD4080
+~PdfPage start 0000017E43CADD30 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.7788 ms)
+Running: Annotation_Delete... Created PdfDocument 0000017E43CD4640
+GetPage created 0000017E43CAD2E0 with parent 0000017E43CD4640
+~PdfPage start 0000017E43CAD2E0 with parent 0000017E43CD4640
+ReleasePage start 0000017E43CD4640
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (2.1381 ms)
+Running: TextEditing_BasicModification_SaveReopen... Loading file...
+Created PdfDocument 0000017E43CD4640
+Loaded!
+Checking res.has_value()...
+Checked!
+Moving doc...
+Moved!
+Getting page...
+GetPage created 0000017E43CAD390 with parent 0000017E43CD4640
+Got page!
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+Created PdfDocument 0000017E43CD41F0
+GetPage created 0000017E43CADF40 with parent 0000017E43CD41F0
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+Checking foundNewText: 0
+~PdfPage start 0000017E43CADF40 with parent 0000017E43CD41F0
+ReleasePage start 0000017E43CD41F0
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 0000017E43CAD390 with parent 0000017E43CD4640
+ReleasePage start 0000017E43CD4640
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: foundNewText
+Running: TextEditing_UnicodeModification... Loading file...
+Created PdfDocument 0000017E43CD4360
+Loaded!
+Checking res.has_value()...
+Checked!
+Moving doc...
+Moved!
+Getting page...
+GetPage created 0000017E43CAD860 with parent 0000017E43CD4360
+Got page!
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+Created PdfDocument 0000017E43CD3F10
+GetPage created 0000017E43CAD440 with parent 0000017E43CD3F10
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+Checking foundNewText: 0
+~PdfPage start 0000017E43CAD440 with parent 0000017E43CD3F10
+ReleasePage start 0000017E43CD3F10
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 0000017E43CAD860 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+FAIL
+  Error: EXPECT_TRUE failed: foundNewText
+Running: TextEditing_AddText_Move_Delete... Loading file...
+Created PdfDocument 0000017E43CD4080
+Loaded!
+Checking res.has_value()...
+Checked!
+Moving doc...
+Moved!
+Getting page...
+GetPage created 0000017E43CADE90 with parent 0000017E43CD4080
+Got page!
+GetPage created 0000017E43CADFF0 with parent 0000017E43CD4080
+~PdfPage start 0000017E43CADFF0 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+~PdfPage end
+GetPage created 0000017E43CADBD0 with parent 0000017E43CD4080
+GetTextObjects start
+Counting objects...
+Count: 4
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+GetObject 3
+Type is text
+Returning textObjs
+Found object text: 'Hello PDF Elite
+This is a second line.
+1234567890'
+Found object text: 'New Added Text'
+GetPage created 0000017E43CADD30 with parent 0000017E43CD4080
+~PdfPage start 0000017E43CADD30 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+~PdfPage end
+GetTextObjects start
+Counting objects...
+Count: 3
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+Returning textObjs
+GetPage created 0000017E43CADDE0 with parent 0000017E43CD4080
+~PdfPage start 0000017E43CADDE0 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+~PdfPage end
+GetTextObjects start
+Counting objects...
+Count: 4
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+GetObject 3
+Type is text
+Returning textObjs
+~PdfPage start 0000017E43CADBD0 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+~PdfPage end
+~PdfPage start 0000017E43CADE90 with parent 0000017E43CD4080
+ReleasePage start 0000017E43CD4080
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+Func returned!
+PASS (14.7303 ms)
+Running: MultilineText_Validation_Workflow... Created PdfDocument 0000017E43CD4A90
+GetPage created 0000017E43CADF40 with parent 0000017E43CD4A90
+GetPage created 0000017E43CADBD0 with parent 0000017E43CD4A90
+~PdfPage start 0000017E43CADBD0 with parent 0000017E43CD4A90
+ReleasePage start 0000017E43CD4A90
+ReleasePage lock acquired
+~PdfPage end
+GetTextObjects start
+Counting objects...
+Count: 4
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+GetObject 3
+Type is text
+Returning textObjs
+~PdfDocument start
+~PdfDocument end
+Created PdfDocument 0000017E43CD4360
+GetPage created 0000017E43CAD9C0 with parent 0000017E43CD4360
+GetTextObjects start
+Counting objects...
+Count: 7
+GetObject 0
+Type is text
+GetObject 1
+Type is text
+GetObject 2
+Type is text
+GetObject 3
+Type is text
+GetObject 4
+Type is text
+GetObject 5
+Type is text
+GetObject 6
+Type is text
+Returning textObjs
+~PdfPage start 0000017E43CAD9C0 with parent 0000017E43CD4360
+ReleasePage start 0000017E43CD4360
+ReleasePage lock acquired
+Closing FPDF_PAGE...
+FPDF_PAGE closed
+~PdfPage end
+~PdfDocument start
+~PdfDocument end
+~PdfPage start 0000017E43CADF40 with parent 0000017E43CD4A90
+ReleasePage start 0000017E43CD4A90
+ReleasePage lock acquired

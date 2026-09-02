@@ -1,0 +1,22 @@
+Building PDFEliteUIPreview.exe...
+PreviewMain.cpp
+MainWindow.cpp
+AppShell.cpp
+AppShell.cpp(113): warning C4244: '=': conversion from 'size_t' to 'float', possible loss of data
+AppShell.cpp(293): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+DocumentView.cpp
+DocumentView.cpp(57): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+DocumentView.cpp(95): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+PdfCanvas.cpp
+PdfDocument.cpp
+Theme.cpp
+ThemeManager.cpp
+NativeDesignSystem.cpp
+IconSystem.cpp
+IconSystem.cpp(141): warning C4267: 'argument': conversion from 'size_t' to 'ULONG', possible loss of data
+LayoutManager.cpp
+GraphicsDevice.cpp
+TileCache.cpp
+RenderWorker.cpp
+Generating Code...
+Build succeeded!

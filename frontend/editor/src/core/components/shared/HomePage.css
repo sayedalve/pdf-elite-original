@@ -1,0 +1,354 @@
+/* ============================================================
+   Home Page — PDF Elite Desktop Application Layout
+   Follows pdf-viewer-ui-ux-skill.md design system:
+   - Document-first desktop composition
+   - Left nav sidebar + main workspace
+   - Professional typography scale
+   - Surface token system (midnight dark theme)
+   ============================================================ */
+
+/* ── Root layout ─────────────────────────────────────────── */
+.home-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--c-bg, var(--p-doc-surface-workspace));
+}
+
+/* ── Left navigation sidebar ─────────────────────────────── */
+.home-nav {
+  width: 220px;
+  min-width: 220px;
+  height: 100%;
+  background: var(--c-bg-raised, var(--p-doc-surface-chrome));
+  border-right: 1px solid var(--c-border, var(--p-doc-surface-hover-selected));
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.home-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.125rem 1rem 1rem;
+  border-bottom: 1px solid var(--c-border-subtle, rgba(255, 255, 255, 0.05));
+  flex-shrink: 0;
+}
+
+.home-nav__brand-text {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--c-text, var(--p-doc-text-primary));
+  letter-spacing: -0.01em;
+  user-select: none;
+}
+
+.home-nav__section {
+  padding: 1rem 0 0.5rem;
+  flex-shrink: 0;
+}
+
+.home-nav__section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-subtle, var(--p-doc-text-disabled));
+  padding: 0 1rem 0.375rem;
+  display: block;
+}
+
+.home-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.home-nav__item:hover {
+  background: var(--c-hover, var(--p-doc-surface-hover-selected));
+  color: var(--c-text, var(--p-doc-text-primary));
+}
+
+.home-nav__item.active {
+  background: color-mix(
+    in srgb,
+    var(--c-accent, var(--p-doc-accent-primary)) 14%,
+    transparent
+  );
+  color: var(--c-accent, var(--p-doc-accent-primary));
+}
+
+.home-nav__item-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.home-nav__item.active .home-nav__item-icon {
+  opacity: 1;
+}
+
+.home-nav__divider {
+  height: 1px;
+  background: var(--c-border-subtle, rgba(255, 255, 255, 0.05));
+  margin: 0.5rem 0;
+}
+
+.home-nav__spacer {
+  flex: 1;
+}
+
+.home-nav__footer {
+  padding: 0.75rem;
+  border-top: 1px solid var(--c-border-subtle, rgba(255, 255, 255, 0.05));
+  flex-shrink: 0;
+}
+
+/* ── Main workspace ──────────────────────────────────────── */
+.home-workspace {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--c-bg, var(--p-doc-surface-workspace));
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Dropzone overlay ──────────────────────────────────────── */
+.home-dropzone {
+  flex: 1;
+  min-height: 100%;
+}
+
+.home-dropzone[data-accept] {
+  outline: 2px dashed var(--c-primary, var(--p-doc-accent-primary));
+  outline-offset: -4px;
+  border-radius: 8px;
+}
+
+.home-dropzone[data-reject] {
+  outline: 2px dashed var(--mantine-color-red-6);
+  outline-offset: -4px;
+  border-radius: 8px;
+}
+
+/* ── Content area ──────────────────────────────────────────── */
+.home-content {
+  max-width: 1100px;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ── Hero actions area ──────────────────────────────────────── */
+.home-hero {
+  margin-bottom: 2.5rem;
+  animation: home-fade-in 0.2s ease-out both;
+}
+
+.home-hero__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-text, var(--p-doc-text-primary));
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 0.375rem 0;
+}
+
+.home-hero__subtitle {
+  font-size: 0.875rem;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.home-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── Section header ──────────────────────────────────────── */
+.home-section {
+  margin-bottom: 2rem;
+  animation: home-fade-in 0.2s ease-out 0.1s both;
+}
+
+.home-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.home-section__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  margin: 0;
+}
+
+.home-section__action {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--c-accent, var(--p-doc-accent-primary));
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.home-section__action:hover {
+  text-decoration: underline;
+}
+
+/* ── Recent files list ──────────────────────────────────────── */
+.home-recent-list {
+  border: 1px solid var(--c-border, var(--p-doc-surface-hover-selected));
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--c-surface, var(--p-doc-surface-elevated));
+}
+
+.home-recent-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--c-border-subtle, rgba(255, 255, 255, 0.05));
+  width: 100%;
+  text-align: left;
+  color: var(--c-text, var(--p-doc-text-primary));
+  transition: background-color 0.1s ease;
+  text-decoration: none;
+}
+
+.home-recent-item:last-child {
+  border-bottom: none;
+}
+
+.home-recent-item:hover {
+  background: var(--c-hover, var(--p-doc-surface-hover-selected));
+}
+
+.home-recent-item__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: var(--c-accent, var(--p-doc-accent-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-recent-item__name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--c-text, var(--p-doc-text-primary));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.home-recent-item__meta {
+  font-size: 0.75rem;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Quick Tools grid ──────────────────────────────────────── */
+.home-tools {
+  background: var(--c-surface, var(--p-doc-surface-elevated));
+  border: 1px solid var(--c-border, var(--p-doc-surface-hover-selected));
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.home-tools__inner {
+  padding: 0.25rem;
+}
+
+/* ── Empty state ──────────────────────────────────────────── */
+.home-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.home-empty__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0.4;
+}
+
+.home-empty__text {
+  font-size: 0.8125rem;
+  color: var(--c-text-muted, var(--p-doc-text-secondary));
+  margin: 0;
+}
+
+/* ── Entrance animations ──────────────────────────────────── */
+@keyframes home-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-section:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero,
+  .home-section {
+    animation: none;
+  }
+}

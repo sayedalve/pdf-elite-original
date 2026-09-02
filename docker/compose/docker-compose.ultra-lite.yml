@@ -1,0 +1,37 @@
+services:
+  pdf-elite:
+    build:
+      context: ../..
+      dockerfile: docker/embedded/Dockerfile.ultra-lite
+    container_name: pdf-elite-ultra-lite
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080$${SYSTEM_ROOTURIPATH:-''}/api/v1/info/status | grep -q 'UP'"]
+      interval: 5s
+      timeout: 10s
+      retries: 16
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../stirling/latest/config:/configs:rw
+      - ../../stirling/latest/logs:/logs:rw
+    environment:
+      DISABLE_ADDITIONAL_FEATURES: "true"
+      SECURITY_ENABLELOGIN: "false"
+      ENDPOINTS_GROUPS_TO_REMOVE: "CLI"
+      LANGS: "en_GB,en_US"
+      SYSTEM_DEFAULTLOCALE: en-US
+      UI_APPNAME: pdf-elite
+      UI_HOMEDESCRIPTION: Ultra-lite version of pdf-elite
+      UI_APPNAMENAVBAR: pdf-elite Ultra-lite
+      SYSTEM_MAXFILESIZE: "50"
+    networks:
+      - stirling-network
+
+networks:
+  stirling-network:
+    driver: bridge

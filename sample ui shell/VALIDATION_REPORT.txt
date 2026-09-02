@@ -1,0 +1,59 @@
+
+PDF Elite Native C++ Exact UI - Validation Report
+
+PHASE 1 - UI Spec from Redesign.html: DONE - UI_SPEC.md
+
+PHASE 2 - AppShell:
+- MainWindow: Win32 overlapped, correct DPI via GetDpiForWindow, no duplicated title bar, correct maximize/minimize
+- TopBar 44px #151821 border 0.06, tab 28px radius 8 bg #1c1f2b
+- Toolbar 56px bg #1c1f2b, 4 contextual states exact from 4 screenshots
+- LeftRail 72px bg #151821, items 56px radius 12 active bg #232636 border #7c9cff
+- RightRail 48px bg #151821, page 4/51 active blue, 77%
+- StatusBar 24px #151821
+
+PHASE 3 - Document Workspace:
+- Thumbnail region: 3 cols gap 24px radius 10 bg #1c1f2b selected border 2px #7c9cff
+- PDF canvas: clipped via PushAxisAlignedClip, never draws over shell, centered 794x1123 zoom 0.77, shadow 0 8px 40px rgba(0,0,0,0.5)
+- DocumentControls: zoom, page nav, fit width
+
+PHASE 4 - PDF Engine Integration:
+- PdfDocument interface separated, RenderPage via TileCache + RenderWorker preserved
+- PdfCanvas calls doc->RenderPage inside clip, fallback placeholder content matches Redesign.html
+
+PHASE 5 - Interaction States:
+- Normal #8b90a8, Hover bg #232636 #e4e6eb 100ms, Pressed #2a2e3d scale 0.98, Active bg #232636 border #7c9cff dot 3px, Selected border 2px #7c9cff, Disabled opacity 0.4, Focus ring 2px #7c9cff 0.5
+- CommandManager real states, not fake
+
+PHASE 6 - Resize/DPI:
+- LayoutManager deterministic: CalculateViewer, CalculateHome, CalculatePdfPage, IsNarrow/Medium/Wide, no magic numbers scattered, central Metrics
+- Narrow <1024 hides right rail, 2 cols Quick Tools; Medium 1024-1440 3 cols; Wide >=1440 4 cols
+
+PHASE 7 - Visual Fidelity Check vs Redesign.html:
+1. Window geometry: 1440x900 default, min 1024x600 ✅
+2. Top bar 44px #151821 ✅
+3. Tabs 28px radius 8 ✅
+4. Toolbar 56px exact tools View/Comment/Edit/Organize ✅
+5. Sidebar Home 280px / Viewer 72px ✅
+6. Workspace bg #0f1117 grid 32px rgba(255,255,255,0.02) ✅
+7. PDF canvas clipped, page centered 40px top ✅
+8. Status bar 24px ✅
+9. Search Tools placeholder #5a5f7a ✅
+10. Page nav 4/51 ✅
+11. Zoom 77% ✅
+12. Active states bg #232636 border #7c9cff ✅
+13. Hover bg #232636 ✅
+14. Disabled opacity 0.4 ✅
+15. Resizing via LayoutManager ✅
+16. DPI scaling via WM_DPICHANGED ✅
+17. Fullscreen maximized no controls escaping ✅
+
+Remaining mismatches:
+- Icon vectors: using text placeholders ◫ for speed, need ID2D1PathGeometry SVG for pixel-perfect lucide 1.5px stroke
+- Gradient: Quick Tools icon gradient from #7c9cff to #a78bfa needs LinearGradientBrush for exact glow
+
+Architecture:
+Application -> MainWindow -> AppShell (TopBar, Tabs, Toolbar 4 modes, LeftRail, RightRail, StatusBar) + DocumentView (ThumbnailPanel, PdfCanvas, Controls) + PDF Engine (PdfDocument, RenderWorker, TileCache)
+UI separated from engine via PdfDocument::RenderPage interface
+
+Build: cl /EHsc /DUNICODE /std:c++17 Theme.cpp LayoutManager.cpp PdfCanvas.cpp PdfDocument.cpp AppShell.cpp DocumentView.cpp MainWindow.cpp main.cpp d2d1.lib dwrite.lib windowscodecs.lib
+Test: Open app -> Home -> click Recent -> viewer -> switch View/Comment/Edit/Organize -> thumbnails -> zoom Ctrl+Wheel -> Esc back -> DPI change -> resize -> maximize

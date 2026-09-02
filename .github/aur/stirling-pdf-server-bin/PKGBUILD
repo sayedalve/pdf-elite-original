@@ -1,0 +1,77 @@
+# Maintainer: PDF Elite Inc <contact@PDFElitepdf.com>
+pkgname=pdf-elite-server-bin
+pkgver=2.14.2
+pkgrel=1
+pkgdesc="Locally hosted, web-based PDF manipulation tool (server JAR, prebuilt)"
+arch=('any')
+url="https://www.PDFElite.com"
+license=('MIT' 'LicenseRef-pdf-elite-Proprietary')
+depends=('java-runtime>=25')
+provides=('pdf-elite-server')
+conflicts=('pdf-elite-server' 'pdf-elite-server-git')
+backup=('etc/pdf-elite-server/settings.yml')
+
+source=("pdf-elite-with-login-${pkgver}.jar::https://github.com/PDFElite-Tools/pdf-elite/releases/download/v${pkgver}/pdf-elite-with-login.jar")
+sha256sums=('PLACEHOLDER_JAR_SHA256')
+
+package() {
+    # JAR
+    install -Dm644 "pdf-elite-with-login-${pkgver}.jar" \
+        "${pkgdir}/usr/share/pdf-elite-server/pdf-elite-server.jar"
+
+    # Wrapper script
+    install -Dm755 /dev/stdin "${pkgdir}/usr/bin/pdf-elite-server" << 'EOF'
+#!/bin/sh
+exec java $JAVA_OPTS -jar /usr/share/pdf-elite-server/pdf-elite-server.jar "$@"
+EOF
+
+    # systemd unit
+    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/systemd/system/pdf-elite-server.service" << 'EOF'
+[Unit]
+Description=pdf-elite Server
+After=network.target
+
+[Service]
+Type=simple
+User=pdf-elite
+Group=pdf-elite
+WorkingDirectory=/var/lib/pdf-elite-server
+ExecStart=/usr/bin/java -jar /usr/share/pdf-elite-server/pdf-elite-server.jar
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pdf-elite-server
+Environment=JAVA_OPTS=-Xmx512m
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    # sysusers
+    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/sysusers.d/pdf-elite-server.conf" << 'EOF'
+u pdf-elite - "pdf-elite Server" /var/lib/pdf-elite-server -
+EOF
+
+    # tmpfiles
+    install -Dm644 /dev/stdin "${pkgdir}/usr/lib/tmpfiles.d/pdf-elite-server.conf" << 'EOF'
+d /var/lib/pdf-elite-server 0750 pdf-elite pdf-elite -
+d /var/log/pdf-elite-server 0750 pdf-elite pdf-elite -
+EOF
+
+    # Default config stub
+    install -dm755 "${pkgdir}/etc/pdf-elite-server"
+    install -Dm644 /dev/stdin "${pkgdir}/etc/pdf-elite-server/settings.yml" << 'EOF'
+# pdf-elite Server configuration
+# See https://github.com/PDFElite-Tools/pdf-elite for all options
+server:
+  port: 8080
+EOF
+
+    # License
+    install -Dm644 /dev/stdin "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE" << 'EOF'
+MIT License with proprietary carve-outs (open-core).
+SPDX: MIT AND LicenseRef-pdf-elite-Proprietary
+See https://github.com/PDFElite-Tools/pdf-elite/blob/main/LICENSE
+EOF
+}

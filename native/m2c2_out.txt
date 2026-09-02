@@ -1,0 +1,8 @@
+Starting Milestone 2 Challenger 2 Empirical Test Suite...
+======================================
+ PDF Elite Native Regression Suite
+======================================
+
+Running: M2_StatusBar_NullActiveTab_AllActions_NoCrash... Func returned!
+PASS (52.3866 ms)
+Running: M2_StatusBar_PostTabClose_AllActions_Safety... Created PdfDocument 0000023949172030

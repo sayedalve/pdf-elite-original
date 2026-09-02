@@ -1,0 +1,203 @@
+name: Build Windows Application
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Setup Java 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+
+      - name: Install Frontend Dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Generate Material Symbols
+        working-directory: frontend
+        run: node editor/scripts/generate-icons.js
+
+      - name: Verify Generated Material Symbols
+        working-directory: frontend
+        shell: powershell
+        run: |
+          $iconFile = "editor\src\assets\material-symbols-icons.json"
+
+          if (-not (Test-Path $iconFile)) {
+            Write-Error "Generated icon file was not found: $iconFile"
+            exit 1
+          }
+
+          $size = (Get-Item $iconFile).Length
+          Write-Host "Generated icon file size: $size bytes"
+
+          if ($size -le 0) {
+            Write-Error "Generated icon file is empty."
+            exit 1
+          }
+
+          Write-Host "Material Symbols icon file generated successfully."
+
+      - name: Build Frontend
+        working-directory: frontend
+        run: npx vite build editor --mode desktop
+
+      - name: Download PDF Elite JAR
+        shell: powershell
+        run: |
+          $jarUrl = "https://files.PDFElitepdf.com/v2.14.2/pdf-elite-with-login.jar"
+          $destDir = "frontend\editor\src-tauri\libs"
+          $destFile = "$destDir\pdf-elite-2.14.2.jar"
+
+          New-Item -ItemType Directory -Force -Path $destDir | Out-Null
+
+          Write-Host "Downloading PDF Elite 2.14.2 JAR..."
+          Invoke-WebRequest -Uri $jarUrl -OutFile $destFile
+
+          if (-not (Test-Path $destFile)) {
+            Write-Error "Download failed: File does not exist at $destFile"
+            exit 1
+          }
+
+          $size = (Get-Item $destFile).Length
+          Write-Host "Downloaded file size: $size bytes"
+
+          if ($size -lt 300000000) {
+            Write-Error "Download failed: File size is too small ($size bytes). Expected about 365MB."
+            exit 1
+          }
+
+          Write-Host "Verifying JAR validity..."
+
+          jar tf $destFile > $null
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Validation failed: File is not a valid JAR archive."
+            exit 1
+          }
+
+          Write-Host "JAR downloaded and verified successfully."
+
+      - name: Build Custom JRE
+        shell: powershell
+        run: |
+          $jreDir = "frontend\editor\src-tauri\runtime\jre"
+
+          if (Test-Path $jreDir) {
+            Remove-Item -Path $jreDir -Recurse -Force
+          }
+
+          Write-Host "Creating bundled JRE..."
+
+          jlink `
+            --add-modules java.base,java.desktop,java.naming,java.logging,java.xml,java.prefs `
+            --output $jreDir `
+            --compress 2 `
+            --strip-debug `
+            --no-header-files `
+            --no-man-pages
+
+          Get-ChildItem -Path $jreDir -Recurse -File | ForEach-Object {
+            [System.IO.File]::SetAttributes(
+              $_.FullName,
+              (
+                [System.IO.File]::GetAttributes($_.FullName) `
+                -band -bnot [System.IO.FileAttributes]::ReadOnly
+              )
+            )
+          }
+
+          Write-Host "Custom JRE created successfully."
+
+      - name: Build Tauri Application
+        working-directory: frontend\editor\src-tauri
+        run: npx tauri build --verbose
+
+      - name: Check Windows Build Outputs
+        if: always()
+        shell: powershell
+        run: |
+          $exe = "frontend\editor\src-tauri\target\release\PDF Elite.exe"
+          $msiDir = "frontend\editor\src-tauri\target\release\bundle\msi"
+
+          Write-Host "========================================"
+          Write-Host "Checking Windows build outputs"
+          Write-Host "========================================"
+
+          Write-Host ""
+          Write-Host "Checking EXE..."
+
+          if (Test-Path $exe) {
+            $exeSize = (Get-Item $exe).Length
+            Write-Host "EXE FOUND"
+            Write-Host "Path: $exe"
+            Write-Host "Size: $exeSize bytes"
+          }
+          else {
+            Write-Warning "PDF Elite.exe was not created."
+          }
+
+          Write-Host ""
+          Write-Host "Checking MSI..."
+
+          if (Test-Path $msiDir) {
+            $msiFiles = Get-ChildItem `
+              -Path $msiDir `
+              -Filter "*.msi" `
+              -ErrorAction SilentlyContinue
+
+            if ($msiFiles) {
+              foreach ($msi in $msiFiles) {
+                Write-Host "MSI FOUND"
+                Write-Host "Path: $($msi.FullName)"
+                Write-Host "Size: $($msi.Length) bytes"
+              }
+            }
+            else {
+              Write-Warning "No MSI installer was created."
+            }
+          }
+          else {
+            Write-Warning "MSI directory does not exist."
+          }
+
+          Write-Host ""
+          Write-Host "Build output check completed."
+
+      - name: Upload Windows EXE
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF-Elite-Windows-EXE
+          path: frontend\editor\src-tauri\target\release\PDF Elite.exe
+          if-no-files-found: error
+
+      - name: Upload Windows MSI
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF-Elite-Windows-MSI
+          path: frontend\editor\src-tauri\target\release\bundle\msi\*.msi
+          if-no-files-found: warn
