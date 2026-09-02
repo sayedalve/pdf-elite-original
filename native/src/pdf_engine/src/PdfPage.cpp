@@ -257,24 +257,109 @@ bool PdfPage::RemoveImage(std::shared_ptr<core::interfaces::dom::IImage> image) 
     return false;
 }
 
+#include "PdfTextObject.h"
+#include <map>
+#include <string>
+
 std::shared_ptr<core::interfaces::dom::ITextObject> PdfPage::InsertTextObject(const std::wstring& text, const RectF& bounds, const std::string& fontName, float fontSize) {
-    (void)text; (void)bounds; (void)fontName; (void)fontSize;
-    return nullptr;
+    std::lock_guard<std::recursive_mutex> docLock(m_parentDoc->GetMutex());
+    std::lock_guard<std::mutex> lock(m_mutex);
+    
+    FPDF_PAGEOBJECT newObj = FPDFPageObj_NewTextObj(m_doc, fontName.c_str(), fontSize);
+    if (!newObj) return nullptr;
+    
+    FPDF_WIDESTRING widestr = reinterpret_cast<FPDF_WIDESTRING>(text.c_str());
+    FPDFText_SetText(newObj, widestr);
+    
+    FS_MATRIX mat = {1, 0, 0, 1, bounds.left, bounds.bottom};
+    FPDFPageObj_SetMatrix(newObj, &mat);
+    
+    FPDFPage_InsertObject(m_page, newObj);
+    FPDFPage_GenerateContent(m_page);
+    
+    return std::make_shared<PdfTextObject>(m_doc, m_page, newObj, &m_parentDoc->GetMutex());
 }
 
 std::vector<std::shared_ptr<core::interfaces::dom::ITextObject>> PdfPage::GetTextObjects() {
-    return {};
+    std::lock_guard<std::recursive_mutex> docLock(m_parentDoc->GetMutex());
+    std::lock_guard<std::mutex> lock(m_mutex);
+    
+    std::vector<std::shared_ptr<core::interfaces::dom::ITextObject>> result;
+    int count = FPDFPage_CountObjects(m_page);
+    
+    std::map<std::string, std::shared_ptr<PdfTextObject>> blocks;
+    
+    for (int i = 0; i < count; ++i) {
+        FPDF_PAGEOBJECT obj = FPDFPage_GetObject(m_page, i);
+        if (FPDFPageObj_GetType(obj) == FPDF_PAGEOBJ_TEXT) {
+            int markCount = FPDFPageObj_CountMarks(obj);
+            std::string blockId;
+            for (int j = 0; j < markCount; ++j) {
+                FPDF_PAGEOBJECTMARK mark = FPDFPageObj_GetMark(obj, j);
+                char nameBuf[256] = {0};
+                FPDFPageObjMark_GetName(mark, nameBuf, sizeof(nameBuf), nullptr);
+                if (std::string(nameBuf) == "PDFElite_TextBlock") {
+                    unsigned long len = 0;
+                    FPDFPageObjMark_GetParamStringValue(mark, "BlockID", nullptr, 0, &len);
+                    if (len > 0) {
+                        std::vector<char> valBuf(len);
+                        FPDFPageObjMark_GetParamStringValue(mark, "BlockID", valBuf.data(), len, nullptr);
+                        blockId = std::string(valBuf.data(), len - 1);
+                    }
+                    break;
+                }
+            }
+            
+            if (!blockId.empty()) {
+                if (blocks.find(blockId) != blocks.end()) {
+                    blocks[blockId]->AddHandle(obj);
+                } else {
+                    auto textObj = std::make_shared<PdfTextObject>(m_doc, m_page, obj, &m_parentDoc->GetMutex());
+                    blocks[blockId] = textObj;
+                    result.push_back(textObj);
+                }
+            } else {
+                result.push_back(std::make_shared<PdfTextObject>(m_doc, m_page, obj, &m_parentDoc->GetMutex()));
+            }
+        }
+    }
+    return result;
 }
 
 bool PdfPage::RemoveTextObject(std::shared_ptr<core::interfaces::dom::ITextObject> textObject) {
-    (void)textObject;
+    std::lock_guard<std::recursive_mutex> docLock(m_parentDoc->GetMutex());
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto pdfTextObj = std::dynamic_pointer_cast<PdfTextObject>(textObject);
+    if (!pdfTextObj) return false;
+    
+    bool removedAny = false;
+    for (auto handle : pdfTextObj->GetHandles()) {
+        FPDFPage_RemoveObject(m_page, handle);
+        removedAny = true;
+    }
+    if (removedAny) {
+        pdfTextObj->SetAttached(false);
+        FPDFPage_GenerateContent(m_page);
+        return true;
+    }
     return false;
 }
 
-
-
-
 bool PdfPage::RestoreTextObject(std::shared_ptr<core::interfaces::dom::ITextObject> textObj) {
-    (void)textObj;
+    std::lock_guard<std::recursive_mutex> docLock(m_parentDoc->GetMutex());
+    std::lock_guard<std::mutex> lock(m_mutex);
+    auto pdfTextObj = std::dynamic_pointer_cast<PdfTextObject>(textObj);
+    if (!pdfTextObj) return false;
+    
+    bool restoredAny = false;
+    for (auto handle : pdfTextObj->GetHandles()) {
+        FPDFPage_InsertObject(m_page, handle);
+        restoredAny = true;
+    }
+    if (restoredAny) {
+        pdfTextObj->SetAttached(true);
+        FPDFPage_GenerateContent(m_page);
+        return true;
+    }
     return false;
 }

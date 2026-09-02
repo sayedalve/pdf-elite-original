@@ -12,29 +12,31 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Download PDFium Binaries
       run: |
-        Invoke-WebRequest -Uri "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/7999/pdfium-win-x64.tgz" -OutFile "pdfium.tgz"
-        New-Item -ItemType Directory -Force -Path native/third_party/pdfium
-        tar -xf pdfium.tgz -C native/third_party/pdfium
+        if (!(Test-Path "native/third_party/pdfium/pdfium.dll")) {
+            Invoke-WebRequest -Uri "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/7999/pdfium-win-x64.tgz" -OutFile "pdfium.tgz"
+            New-Item -ItemType Directory -Force -Path native/third_party/pdfium
+            tar -xf pdfium.tgz -C native/third_party/pdfium
+        }
 
     - name: Configure CMake
-      run: cmake -B native/build -S native -DCMAKE_BUILD_TYPE=Release
+      run: cmake -B native/build -S native
 
     - name: Build
       run: cmake --build native/build --config Release
 
     - name: Run Regression Suite
-      run: native/build/tests/Release/RegressionSuite.exe
+      run: native\build\tests\Release\RegressionSuite.exe
       
     - name: Upload Test Artifacts
       if: failure()
       uses: actions/upload-artifact@v4
       with:
         name: test-artifacts
-        path: native/tests/fixtures/
+        path: native/tests/fixtures/output/
 
     - name: Package Application
       run: cpack -C Release --config build/CPackConfig.cmake -B build/installer
