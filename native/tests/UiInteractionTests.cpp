@@ -2573,6 +2573,8 @@ TEST(M3_ToolStateMachine_PointerCapture_CleanReleaseOnToolSwitch) {
     ui::input::PointerEvent downEvt;
     downEvt.button = ui::input::PointerButton::Left;
     downEvt.canvasPoint = { 27.5f, 27.5f };
+    downEvt.clientDip = { 27.5f, 27.5f };
+    stateMachine.GetContext().getTextPage = nullptr;
     stateMachine.GetContext().getTextPage = [](int) -> core::interfaces::dom::ITextPage* { return nullptr; };
     stateMachine.RoutePointerDown(downEvt);
     EXPECT_TRUE(captureService.IsAnyCaptured());
@@ -2583,6 +2585,7 @@ TEST(M3_ToolStateMachine_PointerCapture_CleanReleaseOnToolSwitch) {
     EXPECT_FALSE(captureService.IsAnyCaptured());
 
     // 3. Start drag in TextSelect tool
+    stateMachine.GetContext().getTextPage = [&](int pageIndex) -> core::interfaces::dom::ITextPage* { return (pageIndex == 0) ? &mockPage : nullptr; };
     downEvt.pageIndex = 0;
     downEvt.pagePoint = { 5.0f, 110.0f };
     downEvt.clientDip = { 5.0f, 110.0f };

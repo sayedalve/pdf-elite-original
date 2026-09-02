@@ -7,7 +7,7 @@ PointerCaptureService::~PointerCaptureService() {
 }
 
 bool PointerCaptureService::AcquireCapture(HWND hwnd, void* ownerToken) {
-    if (!hwnd || !ownerToken) {
+    if (!ownerToken) {
         return false;
     }
 
@@ -18,13 +18,16 @@ bool PointerCaptureService::AcquireCapture(HWND hwnd, void* ownerToken) {
         }
     }
 
-    if (::IsWindow(hwnd)) {
+    // Only call Win32 SetCapture if hwnd is a valid window, to avoid
+    // polluting the message queue with spurious WM_CAPTURECHANGED in unit tests.
+    if (hwnd && ::IsWindow(hwnd)) {
         ::SetCapture(hwnd);
     }
     m_capturedHwnd = hwnd;
     m_ownerToken = ownerToken;
     return true;
 }
+
 
 bool PointerCaptureService::ReleaseCapture(void* ownerToken) {
     if (m_ownerToken && m_ownerToken == ownerToken) {
